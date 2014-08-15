@@ -61,6 +61,16 @@
         // TODO: Breakdown of tweet share in time period
         // TODO: Candidate basic profile - link to vote.je, draw in hansard and voting data?
         
+        // TODO: UI - Type of graph
+        // TODO: UI - users (all, top n, individuals)
+        // TODO: UI - Time (All, Date Range)
+        // TODO: UI - Slots - Month, Week, Day, Hour, Minute
+        // TODO: UI - Dataset choice (as above)
+        
+        // TODO: rankings - most active (all/topN)
+        // TODO: rankings - most positive (all/topN) - own tweets or tweets about?
+        // TODO: rankings - most negative (all/topN) - own tweets or tweets about?
+        
         // TODO: Track followers by point in time (1hr slots?)
         // TODO: Include mentioning in schema e.g. tweet mentions users x y z
         
