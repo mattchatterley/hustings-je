@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
     include_once('inc/database.php');
   
@@ -5,8 +6,9 @@
 
     $database = new Database();
 ?>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8"/>
         <title>hustings.je prototype</title>
 
         <!-- jQuery -->
@@ -20,7 +22,8 @@
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     </head>
     <body>
-        <h1>Table of data</h1>
+        <h1>hustings.je prototypes</h1>
+        <h2>Table of data</h2>
         <?php
             $result = $database->QueryAssoc("select * from ScoredTweets");
 
@@ -59,6 +62,36 @@
                     <?php
                 }
             }
+        ?>
+            <h2>Configurable graph(s)</h2>
+            <fieldset>
+                <legend>Type of Graph</legend>
+                <input type="radio" value="pie" />Pie
+                <input type="radio" value="stream" />Stream
+                <input type="radio" value="bars" />Bars
+            </fieldset>
+            <fieldset>
+                <!-- // TODO: Make this dynamic -->
+                <legend>Participants</legend>
+                <input type="checkbox" value="all" />Everyone
+                <input type="checkbox" value="all" />Most Popular
+                <input type="checkbox" value="all" />Least Popular
+                <br />
+                <br />
+                <input type="checkbox" value="all" />Rod
+                <input type="checkbox" value="all" />Jane
+                <input type="checkbox" value="all" />Freddy
+            </fieldset>
+            <fieldset>
+                
+            </fieldset>
+        <?php
+            // TODO: UI - Type of graph
+            // TODO: UI - users (all, top n, individuals)
+            // TODO: Query -get list of users
+            // TODO: UI - Time (All, Date Range)
+            // TODO: UI - Slots - Month, Week, Day, Hour, Minute
+            // TODO: UI - Dataset choice (as above)
 
             // TODO: Line of user tweets/time, with sentiment (flow)
             // TODO: tweets/time with sentiment, average + total
@@ -70,12 +103,6 @@
             // TODO: Overall feeling about User X (based on tweets mentioning them)
             // TODO: Breakdown of tweet share in time period
             // TODO: Candidate basic profile - link to vote.je, draw in hansard and voting data?
-
-            // TODO: UI - Type of graph
-            // TODO: UI - users (all, top n, individuals)
-            // TODO: UI - Time (All, Date Range)
-            // TODO: UI - Slots - Month, Week, Day, Hour, Minute
-            // TODO: UI - Dataset choice (as above)
 
             // TODO: rankings - most active (all/topN)
             // TODO: rankings - most positive (all/topN) - own tweets or tweets about?
