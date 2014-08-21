@@ -1,0 +1,1 @@
+sqoop export -connect jdbc:mysql://[servername]:3306/hustingsStaging -username [username] -password [password] -table ScoredTweets -export-dir hdfs:///apps/hive/warehouse/tweetsbi -input-fields-terminated-by '\t'

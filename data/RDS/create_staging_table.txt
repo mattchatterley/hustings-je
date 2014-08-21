@@ -1,0 +1,9 @@
+CREATE TABLE `ScoredTweets` (
+  `TweetId` bigint(20) DEFAULT NULL,
+  `Name` varchar(100) DEFAULT NULL,
+  `ScreenName` varchar(100) DEFAULT NULL,
+  `Sentiment` varchar(45) DEFAULT NULL,
+  `SentimentScore` tinyint(4) DEFAULT NULL,
+  `TweetText` varchar(500) DEFAULT NULL,
+  `Timestamp` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
