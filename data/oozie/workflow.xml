@@ -1,0 +1,29 @@
+<workflow-app name="HustingsJe-v1" xmlns="uri:oozie:workflow:0.5">
+	<start to="StageData"/>
+	<action name="StageData">
+		<shell xmlns="uri:oozie:shell-action:0.1">
+            <job-tracker>localhost:8021</job-tracker>
+            <name-node>localhost:8020</name-node>
+            <exec>hadoop fs -cp /user/root/data_backup/test1 /user/flume/tweets/test1</exec>
+		</shell>
+		
+		<ok to="ScoreData"/>
+		<error to="fail"/>
+	</action>
+	<action name="ScoreData">
+		<hive xmlns="uri:oozie:hive-action:0.5">
+			<job-tracker>localhost:8021</job-tracker>
+			<name-node>localhost:8020</name-node>
+			<script>score_tweets.sql</script>
+		</hive>
+		
+		<ok to="end"/>
+		<error to="fail"/>
+	</action>
+	
+    <kill name="fail">
+        <message>Script failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    
+	<end name="end"/>
+</workflow-app>
