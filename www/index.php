@@ -24,6 +24,8 @@
         
         <!-- Local -->
         <link rel="stylesheet" href="assets/css/hustings-je.css" />
+        <script src="assets/js/streamgraph.js"></script>
+        <script src="assets/js/hustings-main.js"></script>
     </head>
     <body>
         <h1>hustings.je prototypes</h1>
@@ -80,59 +82,60 @@
             <h2>Configurable graph(s)</h2>
             <fieldset>
                 <legend>Type of Graph</legend>
-                <input type="radio" value="pie" />Pie
-                <input type="radio" value="stream" />Stream
-                <input type="radio" value="bars" />Bars
+                <input id="graph-type" name="graph-type" type="radio" value="streamgraph" checked/>StreamGraph
+                <input id="graph-type" name="graph-type" type="radio" value="pie" />Pie
+                <input id="graph-type" name="graph-type" type="radio" value="bars" />Bars
             </fieldset>
             <fieldset>
                 <legend>Participants</legend>
-                <input type="checkbox" value="all" />Everyone
-                <input type="checkbox" value="all" />Most Popular
-                <input type="checkbox" value="all" />Least Popular
+                <input id="participant-everyone" class="participant-group" type="checkbox" value="all" checked/>Everyone
+                <input id="participant-most-popular" class="participant-group" type="checkbox" value="most" />Most Popular
+                <input id="participant-least-popular" class="participant-group" type="checkbox" value="least" />Least Popular
                 <br />
                 <br />
                 <?php
                     foreach($users as $user)
                     {
                         ?>
-                            <input type="checkbox" value="<?php echo($user->ScreenName);?>" /><?php echo($user->Name . ' (' . $user->ScreenName . ')');?>
+                            <input class="participant" type="checkbox" value="<?php echo($user->ScreenName);?>" /><?php echo($user->Name . ' (' . $user->ScreenName . ')');?>
                         <?php
                     }
                     ?>
             </fieldset>
             <fieldset>
                 <legend>Time</legend>
-                <input type="radio" value="all" />All
-                <input type="radio" value="from" />Date Range
-                <input type="text" /> to <input type="text" />
+                <input id="time-all" type="radio" value="all" checked/>All
+                <input id="time-range" type="radio" value="from" />Date Range
+                <input id="date-from" type="text" class="datepicker"/> to <input id="date-to" type="text" class="datepicker"/>
             </fieldset>
             <fieldset>
                 <legend>Resolution</legend>
-                <select>
-                    <option>Month</option>
-                    <option>Week</option>
-                    <option>Day</option>
-                    <option>Hour</option>
+                <select id="time-slot">
+                    <option value="month">Month</option>
+                    <option value="week">Week</option>
+                    <option value="day">Day</option>
+                    <option value="hour">Hour</option>
                 </select>
             </fieldset>
             <fieldset>
                 <legend>Data Set</legend>
-                <select>
-                    <!-- TODO: populate this as they become available -->
-                    <option>Sentiment over Time</option>
+                <select id="dataset">
+                    <option value="sentiment-over-time">Sentiment over Time</option>
                 </select>
             </fieldset>
             <fieldset>
                 <legend>Debugging</legend>
-                <button>Update</button>
+                <button onclick="updateVisuals();">Update</button>
             </fieldset>
+            <div id="d3-placeholder"></div>
         <?php
-            // TODO: UI - Type of graph
-            // TODO: UI - users (all, top n, individuals)
-            // TODO: Query -get list of users
-            // TODO: UI - Time (All, Date Range)
-            // TODO: UI - Slots - Month, Week, Day, Hour
-            // TODO: UI - Dataset choice (as above)
+
+            // TODO: UI - Validation
+
+            // TODO: When a user group (e.g. everyone, etc) is picked, uncheck all others
+            // TODO: When an individual user is checked, remove all groups
+        
+            // TODO: Populate all datasets
 
             // TODO: Line of user tweets/time, with sentiment (flow)
             // TODO: tweets/time with sentiment, average + total
