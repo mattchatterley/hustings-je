@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
     include_once('inc/database.php');
+    include_once('inc/User.php');
   
     error_reporting(E_ALL);
 
@@ -20,12 +21,15 @@
 
         <!-- D3js -->
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        
+        <!-- Local -->
+        <link rel="stylesheet" href="assets/css/hustings-je.css" />
     </head>
     <body>
         <h1>hustings.je prototypes</h1>
         <h2>Table of data</h2>
         <?php
-            $result = $database->QueryAssoc("select * from ScoredTweets");
+            $result = $database->Query("select * from ScoredTweets");
 
             ?>
             <h4><?php echo($result->num_rows); ?> rows found...</h4>
@@ -40,29 +44,39 @@
             foreach($fields as $field)
             {
                 ?>
-                    <td>
+                    <th>
                         <?php echo($field->name); ?>
-                    </td>
+                    </th>
                 <?php
             }
             ?>
                 </tr>
-            </table>
             <?php
 
-            $rows = $result->fetch_assoc();
-            foreach($rows as $row)
+            while($row = $result->fetch_assoc())
             {
+                ?>
+                <tr>
+                <?php
                 foreach($fields as $field)
                 {
                     ?>
                         <td>
-                            <?php echo($row[$field->name]); ?>
+                            <?php echo(htmlspecialchars($row[$field->name])); ?>
                         </td>
                     <?php
                 }
+                ?>
+                </tr>
+                <?php
             }
         ?>
+            </table>
+            
+            <?php
+                // prepare data for parameters
+                $users = User::All();
+            ?>
             <h2>Configurable graph(s)</h2>
             <fieldset>
                 <legend>Type of Graph</legend>
@@ -71,26 +85,53 @@
                 <input type="radio" value="bars" />Bars
             </fieldset>
             <fieldset>
-                <!-- // TODO: Make this dynamic -->
                 <legend>Participants</legend>
                 <input type="checkbox" value="all" />Everyone
                 <input type="checkbox" value="all" />Most Popular
                 <input type="checkbox" value="all" />Least Popular
                 <br />
                 <br />
-                <input type="checkbox" value="all" />Rod
-                <input type="checkbox" value="all" />Jane
-                <input type="checkbox" value="all" />Freddy
+                <?php
+                    foreach($users as $user)
+                    {
+                        ?>
+                            <input type="checkbox" value="<?php echo($user->ScreenName);?>" /><?php echo($user->Name . ' (' . $user->ScreenName . ')');?>
+                        <?php
+                    }
+                    ?>
             </fieldset>
             <fieldset>
-                
+                <legend>Time</legend>
+                <input type="radio" value="all" />All
+                <input type="radio" value="from" />Date Range
+                <input type="text" /> to <input type="text" />
+            </fieldset>
+            <fieldset>
+                <legend>Resolution</legend>
+                <select>
+                    <option>Month</option>
+                    <option>Week</option>
+                    <option>Day</option>
+                    <option>Hour</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Data Set</legend>
+                <select>
+                    <!-- TODO: populate this as they become available -->
+                    <option>Sentiment over Time</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Debugging</legend>
+                <button>Update</button>
             </fieldset>
         <?php
             // TODO: UI - Type of graph
             // TODO: UI - users (all, top n, individuals)
             // TODO: Query -get list of users
             // TODO: UI - Time (All, Date Range)
-            // TODO: UI - Slots - Month, Week, Day, Hour, Minute
+            // TODO: UI - Slots - Month, Week, Day, Hour
             // TODO: UI - Dataset choice (as above)
 
             // TODO: Line of user tweets/time, with sentiment (flow)
@@ -111,6 +152,8 @@
             // TODO: Track followers by point in time (1hr slots?)
             // TODO: Include mentioning in schema e.g. tweet mentions users x y z
 
+            // TODO: Ability to record events e.g. hustings?
+        
             /* General thoughts
              * 
              * Flexible graph which has dimensions such as time and sentiment and allows you to add in datasets or users?
