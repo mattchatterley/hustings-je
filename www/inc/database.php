@@ -22,7 +22,9 @@ class Database
         }
     }
     
-    function QueryAssoc($query)
+    /* Utilities */
+    
+    function Query($query)
     {
         if($this->db)
         {
@@ -30,4 +32,7 @@ class Database
             return $result;
         }
     }
+    
+    /* Data Sets */
+    
 }
