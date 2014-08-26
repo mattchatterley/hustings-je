@@ -1,19 +1,23 @@
-<workflow-app name="HustingsJe-v1" xmlns="uri:oozie:workflow:0.5">
+<workflow-app name="HustingsJe-v1" xmlns="uri:oozie:workflow:0.4">
 	<start to="StageData"/>
 	<action name="StageData">
 		<shell xmlns="uri:oozie:shell-action:0.1">
-            <job-tracker>localhost:8021</job-tracker>
-            <name-node>localhost:8020</name-node>
-            <exec>hadoop fs -cp /user/root/data_backup/test1 /user/flume/tweets/test1</exec>
+            <job-tracker>ip-172-31-39-97.eu-west-1.compute.internal:8050</job-tracker>
+            <name-node>hdfs://ip-172-31-39-97.eu-west-1.compute.internal:8020</name-node>
+            <exec>hadoop</exec>
+            <argument>fs</argument>
+            <argument>-cp</argument>
+            <argument>/user/root/data_backup/test1</argument>
+            <argument>/user/flume/tweets/test1</argument>
 		</shell>
 		
 		<ok to="ScoreData"/>
 		<error to="fail"/>
 	</action>
 	<action name="ScoreData">
-		<hive xmlns="uri:oozie:hive-action:0.5">
-			<job-tracker>localhost:8021</job-tracker>
-			<name-node>localhost:8020</name-node>
+		<hive xmlns="uri:oozie:hive-action:0.2">
+			<job-tracker>ip-172-31-39-97.eu-west-1.compute.internal:8050</job-tracker>
+			<name-node>hdfs://ip-172-31-39-97.eu-west-1.compute.internal:8020</name-node>
 			<script>score_tweets.sql</script>
 		</hive>
 		
