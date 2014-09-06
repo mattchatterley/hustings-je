@@ -7,8 +7,9 @@
             <exec>hadoop</exec>
             <argument>fs</argument>
             <argument>-cp</argument>
+            <argument>-f</argument>
             <argument>/user/root/data_backup/test1</argument>
-            <argument>/user/flume/tweets/test1</argument>
+            <argument>/user/flume/tweets/</argument>
 		</shell>
 		
 		<ok to="ScoreData"/>
@@ -18,8 +19,19 @@
 		<hive xmlns="uri:oozie:hive-action:0.2">
 			<job-tracker>ip-172-31-39-97.eu-west-1.compute.internal:8050</job-tracker>
 			<name-node>hdfs://ip-172-31-39-97.eu-west-1.compute.internal:8020</name-node>
+			<job-xml>hive-site.xml</job-xml>
 			<script>score_tweets.sql</script>
 		</hive>
+		
+		<ok to="PushDataToRDS"/>
+		<error to="fail"/>
+	</action>
+	<action name="PushDataToRDS">
+		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
+			<job-tracker>ip-172-31-39-97.eu-west-1.compute.internal:8050</job-tracker>
+			<name-node>hdfs://ip-172-31-39-97.eu-west-1.compute.internal:8020</name-node>
+			<command>export --connect jdbc:mysql://[server]:3306/hustingsStaging --username [usr] --password [pwd] --table ScoredTweets --export-dir hdfs:///apps/hive/warehouse/tweetsbi --input-fields-terminated-by \t</command>
+		</sqoop>
 		
 		<ok to="end"/>
 		<error to="fail"/>
