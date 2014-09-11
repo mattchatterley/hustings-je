@@ -92,6 +92,7 @@ svg.selectAll("path")
   .append("title")
     .text(function(d) { return d.ScreenName; });
 
+console.debug("streamgraph complete");
 }
  /*
 function transition() {
