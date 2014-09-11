@@ -15,6 +15,11 @@ class User
     {
         $this->ScreenName = htmlspecialchars($assocResult["ScreenName"]);
         $this->Name = htmlspecialchars($assocResult["Name"]);
+
+        if(empty($this->Name))
+        {
+            $this->Name = $this->ScreenName;
+        }
     }
     
     static function All()
