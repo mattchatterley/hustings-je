@@ -29,9 +29,9 @@
     </head>
     <body>
         <h1>hustings.je prototypes</h1>
-        <h2>Table of data</h2>
+        <h2>Table of data (latest 10 tweets)</h2>
         <?php
-            $result = $database->Query("select * from ScoredTweets");
+            $result = $database->Query("SELECT * from ScoredTweets ORDER BY Timestamp DESC LIMIT 10");
 
             ?>
             <h4><?php echo($result->num_rows); ?> rows found...</h4>

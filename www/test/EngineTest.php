@@ -15,7 +15,7 @@ $users = User::All();
 
 $from = date('Y-m-d H:i:s', 0);
 $to = date('Y-m-d H:i:s', time());
-$timeslot = 'day';
+$timeslot = 'hour';
 $dataset = 'sentiment-over-time';
 
 echo("Calling Engine...");
@@ -24,10 +24,12 @@ echo("Calling Engine...");
 $engine = new Engine($users, $from, $to, $timeslot, $dataset);
 $engine->Compute();
 
+echo("<pre>");
 var_dump($engine->Results);
+echo("</pre>");
 // use json_encode to output results
 
 //var_dump($engine->Results);
 echo(json_encode($engine->Results));
-die();
+die("...finished");
 ?>

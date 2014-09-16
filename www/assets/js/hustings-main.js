@@ -78,7 +78,10 @@ function updateVisuals()
         },
         error: function (xhr, textStatus, errorThrown)
         {
+            console.debug(xhr)
             console.debug(xhr.responseText);
+            console.debug(textStatus);
+            console.debug(errorThrown);
             alert('Failed! ' + textStatus + ' ' + errorThrown);
         }
     });    

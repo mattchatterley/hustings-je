@@ -4,7 +4,7 @@
  *
  * @author mattc
  */
-include_once('inc/database.php');
+//include_once('inc/database.php');
 
 class User 
 {
@@ -26,6 +26,7 @@ class User
     {
         $db = new Database();
         
+        //$results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets where ScreenName='007Hammer'-- ORDER BY ScreenName");
         $results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets ORDER BY ScreenName");
         
         $users = Array();
