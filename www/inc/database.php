@@ -1,9 +1,9 @@
 <?php
 
-define('DB_HOST', 'web02.mattchedit.com');
-define('DB_USER', 'hustings-je');
-define('DB_PASSWORD', 'Hust1ngs!');
-define('DB_SCHEMA', 'hustings_je');
+define('DB_HOST', 'hustingsjestaging.csxrxm32zjxg.eu-west-1.rds.amazonaws.com');
+define('DB_USER', 'stagingUser');
+define('DB_PASSWORD', 'stagingUserPwd');
+define('DB_SCHEMA', 'hustingsStaging');
 
 class Database
 {
