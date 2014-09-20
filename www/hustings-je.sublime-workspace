@@ -1,0 +1,527 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"timeslot",
+				"timeSlotLengthSeconds"
+			],
+			[
+				"pointIn",
+				"pointInSeconds"
+			],
+			[
+				"timeAxi",
+				"timeAxisPoints"
+			],
+			[
+				"Time",
+				"TimeSlot"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "assets/js/streamgraph.js",
+			"settings":
+			{
+				"buffer_size": 2909,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "handler.php",
+			"settings":
+			{
+				"buffer_size": 1381,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/Engine.php",
+			"settings":
+			{
+				"buffer_size": 5742,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test/EngineTest.php",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Windows",
+				"name": "EngineTest.php"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 6458,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/hustings-main.js",
+			"settings":
+			{
+				"buffer_size": 2073,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/User.php",
+			"settings":
+			{
+				"buffer_size": 899,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Work/Dropbox/MATTCHEDIT/upgrade_notes.txt",
+		"/C/Users/mattc/Downloads/contact-form-7.3.9.3/contact-form-7/includes/contact-form.php",
+		"/C/Users/mattc/Downloads/contact-form-7.3.9.3/contact-form-7/wp-contact-form-7.php",
+		"/C/Users/mattc/Downloads/contact-form-7.3.9.3/contact-form-7/modules/submit.php",
+		"/C/Work/MattchedIT/backup/staging.careyolsen.com/system/expressionengine/third_party/mrelshp/ext.mrelshp.php",
+		"/C/TFS/Development/Source/Lib/Cloudeware.ECommerce/src/test/Cloudeware.ECommerce.Test.csproj",
+		"/C/TFS/Development/Source/Lib/MattchedIT.Hub/src/compat/v119/MattchedIT.Hub.Compat.v119.csproj",
+		"/C/Users/mattc/Desktop/bl-template-news-features-jobs-1ad.html",
+		"/C/inetpub/careyolsen/index.php",
+		"/C/inetpub/careyolsen/system/expressionengine/config/config.php",
+		"/C/inetpub/careyolsen/system/expressionengine/config/database.php",
+		"/C/inetpub/careyolsen/careyolsen-mc-040914-1609.sql",
+		"/C/inetpub/careyolsen/system/expressionengine/controllers/cp/content_publish.php",
+		"/c/inetpub/careyolsen/system/expressionengine/fieldtypes/EE_Fieldtype.php",
+		"/C/inetpub/careyolsen/system/expressionengine/fieldtypes/relationship/ft.relationship.php",
+		"/c/inetpub/careyolsen/system/expressionengine/controllers/cp/content_edit.php",
+		"/C/Work/Dropbox/MATTCHEDIT/CURRENT SITE/httpdocs/system/expressionengine/fieldtypes/rel/ft.rel.php",
+		"/C/inetpub/careyolsen/system/expressionengine/third_party/mrelshp/ft.mrelshp.php",
+		"/C/TFS/Development/Source/PluginHero/WordPress/bugmebar/changelog.txt",
+		"/C/TFS/Development/Source/PluginHero/WordPress/bugmebar/bugmebar.php",
+		"/C/inetpub/careyolsen/system/expressionengine/third_party/structure/mcp.structure.php",
+		"/C/TFS/Clients/CLICSargentJersey/clicsargent.org.je/wp-content/themes/blatantly-child/home.php",
+		"/C/TFS/Clients/CLICSargentJersey/clicsargent.org.je/wp-content/themes/blatantly-child/t-galleries.php",
+		"/C/TFS/Clients/CLICSargentJersey/clicsargent.org.je/wp-content/themes/blatantly-child/style.css",
+		"/C/TFS/Clients/CLICSargentJersey/clicsargent.org.je/wp-content/themes/blatantly-child/lib/facebook.php",
+		"/C/TFS/Clients/CLICSargentJersey/clicsargent.org.je/wp-content/themes/blatantly-child/lib/facebook-v4-4.0/autoload.php",
+		"/C/Work/Dropbox/MATTCHEDIT/CURRENT SITE/careyolsen_db.sql/careyolsen_db.sql",
+		"/C/inetpub/clicsargent/wp-config.php",
+		"/C/Users/mattc/Downloads/facebook-php-sdk-v4-4.0-dev/facebook-php-sdk-v4-4.0-dev/composer.json",
+		"/C/Users/mattc/Downloads/facebook-php-sdk-v4-4.0-dev/facebook-php-sdk-v4-4.0-dev/autoload.php",
+		"/C/inetpub/hive-dev/conf/config.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/discussions.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/modules/discussionfilter.php",
+		"/C/inetpub/hive-dev/plugins/HiveMemberList/class.hivememberlist.plugin.php",
+		"/C/inetpub/hive-dev/plugins/FileUpload/class.fileupload.plugin.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/table.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/modules/guest.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/dashboard/views/modules/guest.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/vanilla/views/modules/categories.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/discussions/index.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/vanilla/views/categories/discussions.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/all.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/dashboard/models/class.activitymodel.php",
+		"/C/TFS/Clients/Claire Boscq-Scott/hive/conf/locale.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/dashboard/locale/en-CA/definitions.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/vanilla/views/categories/all.php",
+		"/C/inetpub/hive-dev/conf/locale.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/vanilla/models/class.discussionmodel.php",
+		"/C/Program Files (x86)/PHP/v5.5/php.ini",
+		"/C/sendmail/sendmail.ini",
+		"/C/Users/mattc/Desktop/php.ini",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/dashboard/controllers/class.notificationscontroller.php",
+		"/C/Users/mattc/Desktop/vanilla-core-2-1-1/vanilla/applications/dashboard/controllers/class.entrycontroller.php",
+		"/C/Users/mattc/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/mattc/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"related",
+			"related_",
+			"related",
+			"RELATED_ENTRIES",
+			"site/knowledge-client-work",
+			"kknowledge-client-work",
+			" />",
+			"Blank_Sequence",
+			"embed",
+			"segment_2",
+			"urlrel",
+			"settings",
+			"display_field",
+			"		echo(\"\");\ndisplay_field",
+			"display_field",
+			"display_publish_field",
+			"entry_form",
+			"exp_channel_titles",
+			":3",
+			"require",
+			"mrel",
+			"mrelsh",
+			"mreslsh",
+			"protect",
+			"follow the link",
+			"from",
+			"queue(",
+			"NotifyNewDiscussion",
+			"notification",
+			"4",
+			"Notification"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			">\n      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>\n    </None>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "assets/js/streamgraph.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2670,
+								2670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 923.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "handler.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1303,
+								1303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 294.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "inc/Engine.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3953,
+								3953
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1349.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "test/EngineTest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"auto_name": "EngineTest.php",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2869,
+								2869
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1274.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "assets/js/hustings-main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2073,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1985,
+								1985
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "inc/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "hustings-je.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

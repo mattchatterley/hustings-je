@@ -4,7 +4,7 @@
  *
  * @author mattc
  */
-include_once('inc/database.php');
+//include_once('inc/database.php');
 
 class User 
 {
@@ -15,12 +15,18 @@ class User
     {
         $this->ScreenName = htmlspecialchars($assocResult["ScreenName"]);
         $this->Name = htmlspecialchars($assocResult["Name"]);
+
+        if(empty($this->Name))
+        {
+            $this->Name = $this->ScreenName;
+        }
     }
     
     static function All()
     {
         $db = new Database();
         
+        //$results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets where ScreenName='007Hammer'-- ORDER BY ScreenName");
         $results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets ORDER BY ScreenName");
         
         $users = Array();

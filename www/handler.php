@@ -33,6 +33,7 @@ else
     // participants
 }
 
+// TODO: Pick up from parameters if specified
 $from = date('Y-m-d H:i:s', 0);
 $to = date('Y-m-d H:i:s', time());
 
@@ -44,6 +45,8 @@ if($_POST["range"] == "true")
 // TODO: Implement timeslot size (timeslots) - do we need to do anything more complicated?
 $timeslot = $_POST["timeslots"];
 
+// TODO: HACK THIS TO DAY TEMPORARY
+$timeslot = "hour";
 /* Not sure we need this?
 switch($_POST["dataset"])
 {

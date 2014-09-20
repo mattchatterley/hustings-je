@@ -22,14 +22,16 @@ function startStreamGraph(data)
   }
 ];*/
 
-
 // note that we need to turn x into a number, not a date
+console.debug('data');
 console.debug(data);
 // we have an array of arrays of objects (users, points)
-var stack = d3.layout.stack().offset("wiggle").values(function(d) { return d.Values; });
-  //console.debug(stack);
+var stack = d3.layout.stack().offset("wiggle").values(function(d) { console.debug(d); return d.Values; });
+console.debug('stack');
+console.debug(stack);
 
     var layers = stack(data);
+  console.debug('layers');
   console.debug(layers);
 //console.debug(layers);
 
@@ -44,18 +46,13 @@ var x = d3.scale.linear()
     .domain([0, m - 1])
     .range([0, width]);
 
-console.debug("here1");
 //    .domain([0, d3.max(layers0.concat(layers1), function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); })])
 var y = d3.scale.linear()
-    .domain([0, d3.max(layers, function(layer) {  console.debug(layer); return d3.max(layer.Values, function(d) { console.debug(d); return d.y0 + d.y; }); })])
+    .domain([0, d3.max(layers, function(layer) {  return d3.max(layer.Values, function(d) { return d.y0 + d.y; }); })])
     .range([height, 0]);
-
-console.debug("here2.1");
 
 var color = d3.scale.linear()
     .range(["#aad", "#556"]);
-
-console.debug("here2.2");
 
 
 var area = d3.svg.area()
@@ -92,6 +89,7 @@ svg.selectAll("path")
   .append("title")
     .text(function(d) { return d.ScreenName; });
 
+console.debug("streamgraph complete");
 }
  /*
 function transition() {
