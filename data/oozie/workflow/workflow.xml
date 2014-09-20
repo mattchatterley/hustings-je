@@ -1,0 +1,104 @@
+<workflow-app name="HustingsJe-v1" xmlns="uri:oozie:workflow:0.4">
+	<start to="StageData"/>
+	<action name="StageData">
+		<shell xmlns="uri:oozie:shell-action:0.1">
+            <job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
+            <name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
+            <prepare>
+            	<mkdir path="hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020/user/root/processing"/>
+            	<mkdir path="hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020/user/root/backup"/>
+            </prepare>
+            <exec>sh</exec>
+            <argument>/home/stage_data.sh</argument>
+		</shell>
+		
+		<ok to="CleanData"/>
+		<error to="StoreDataOnError"/>
+	</action>
+	<action name="CleanData">
+		<map-reduce>
+            <job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
+            <name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
+            <prepare>
+            	<delete path="hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020/user/root/clean"/>
+            </prepare>
+            <streaming>
+                <mapper>/home/clean_non_ascii_mapper.py</mapper>
+                <reducer></reducer>
+            </streaming>
+            <configuration>
+                <property>
+                    <name>mapred.input.dir</name>
+                    <value>/user/root/processing/*</value>
+                </property>
+                <property>
+                    <name>mapred.output.dir</name>
+                    <value>/user/root/clean</value>
+                </property>
+            </configuration>
+		</map-reduce>
+		
+		<ok to="ScoreData"/>
+		<error to="StoreDataOnError"/>
+	</action>
+	<action name="ScoreData">
+		<hive xmlns="uri:oozie:hive-action:0.2">
+			<job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
+			<name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
+			<job-xml>hive-site.xml</job-xml>
+			<script>score_tweets.sql</script>
+		</hive>
+		
+		<ok to="PushDataToRDS"/>
+		<error to="StoreDataOnError"/>
+	</action>
+	<action name="PushDataToRDS">
+		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
+			<job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
+			<name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
+			<command>export --connect jdbc:mysql://web02.mattchedit.com:3306/hustings_je --username hustings-je --password Hust1ngs! --table ScoredTweets --export-dir hdfs:///apps/hive/warehouse/tweetsbi --input-fields-terminated-by \t</command>
+		</sqoop>
+		
+		<ok to="Cleanup"/>
+		<error to="StoreDataOnError"/>
+	</action>
+	
+	
+	<action name="StoreDataOnError">
+		<shell xmlns="uri:oozie:shell-action:0.1">
+            <job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
+            <name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
+            <prepare>
+            	<mkdir path="hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020/user/root/not_processed"/>
+            </prepare>
+            <exec>hadoop</exec>
+            <argument>fs</argument>
+            <argument>-mv</argument>
+            <argument>/user/root/processing/*</argument>
+            <argument>/user/root/not_processed</argument>
+		</shell>
+		
+		<ok to="fail"/>
+		<error to="fail"/>
+	</action>
+	
+	<action name="Cleanup">
+		<shell xmlns="uri:oozie:shell-action:0.1">
+            <job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
+            <name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
+            <exec>hadoop</exec>
+            <argument>fs</argument>
+            <argument>-rm</argument>
+            <argument>/user/root/processing/*</argument>
+		</shell>
+		
+		<ok to="end"/>
+		<error to="fail"/>
+	</action>
+	
+    <kill name="fail">
+        <message>Script failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    
+	<end name="end"/>
+</workflow-app>

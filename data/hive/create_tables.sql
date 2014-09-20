@@ -5,6 +5,12 @@ DROP TABLE tweets_raw;
 DROP TABLE tweetsbi;
 --create the tweets_raw table containing the records as received from Twitter
 
+CREATE TABLE tweets_scrubbed (
+	tweet string,
+	emptyValue string 
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
 CREATE EXTERNAL TABLE tweets_raw (
    id BIGINT,
    created_at STRING,

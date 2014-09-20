@@ -1,0 +1,11 @@
+<coordinator-app name="hustingsJe-coord-v1" frequency="1"
+                    start="2014-09-17T21:15Z" end="2014-10-16T12:00Z"
+                    timezone="GMT+01:00"
+                    xmlns="uri:oozie:coordinator:0.1">
+
+      <action>
+        <workflow>
+          <app-path>${nameNode}/user/root/oozie/workflow</app-path>
+       </workflow>
+      </action>
+   </coordinator-app>
