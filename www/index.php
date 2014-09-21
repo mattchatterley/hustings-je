@@ -24,8 +24,9 @@
         
         <!-- Local -->
         <link rel="stylesheet" href="assets/css/hustings-je.css" />
-        <script src="assets/js/streamgraph.js"></script>
         <script src="assets/js/hustings-main.js"></script>
+        <script src="assets/js/streamgraph.js"></script>
+        <script src="assets/js/stackedbars.js"></script>
     </head>
     <body>
         <h1>hustings.je prototypes</h1>

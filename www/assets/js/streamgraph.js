@@ -115,11 +115,7 @@ function altStreamGraph(data)
     //layers0 = stack(d3.range(n).map(function() { return bumpLayer(m); })),
     //layers1 = stack(d3.range(n).map(function() { return bumpLayer(m); }));
 
-console.debug(data);
-console.debug(data.Values);
-console.debug(data["Values"]);
 console.debug(data[0].Values);
-console.debug(bumpLayer(m));
 
 var width = 960,
     height = 500;
