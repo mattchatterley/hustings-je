@@ -75,7 +75,6 @@ function updateVisuals()
             //alert(data);
             // TODO: Start using transition function if we have just shown a graph, so we get a nice effect
             startStreamGraph(data);
-            altStreamGraph(data);
             startStackedBars(data);
         },
         error: function (xhr, textStatus, errorThrown)
