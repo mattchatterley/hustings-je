@@ -190,6 +190,7 @@ class Engine
                 if(!in_array($j, $xAxisKeys))
                 //if(!array_key_exists($j, $result["Values"]))
                 {
+                    // TODO: If we set the default value to 0, it breaks the graphs (not sure why) - we may need to add 1 to all other values to compensate?
                     $result["Values"][] = array('x'=>$j, 'y'=>1);
                 }            
             }

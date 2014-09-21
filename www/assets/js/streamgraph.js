@@ -1,10 +1,13 @@
 function startStreamGraph(data)
 {
-  var n = 20, // number of layers
-    m = 200, // number of samples per layer
+console.debug(data);
+
+var n = data.length, // number of layers
+    m = data[0].Values.length, // number of samples per layer
+    x=0,
     stack = d3.layout.stack().offset("wiggle"),
-    layers0 = stack(d3.range(n).map(function() { return data[0].Values; })),
-    layers1 = stack(d3.range(n).map(function() { return data[0].Values; }));
+    layers0 = stack(d3.range(n).map(function() { return data[x].Values; })),
+    layers1 = stack(d3.range(n).map(function() { return data[x++].Values; }));
     //layers0 = stack(d3.range(n).map(function() { return bumpLayer(m); })),
     //layers1 = stack(d3.range(n).map(function() { return bumpLayer(m); }));
 
@@ -38,4 +41,6 @@ svg.selectAll("path")
   .enter().append("path")
     .attr("d", area)
     .style("fill", function() { return color(Math.random()); });
+
+    // TODO: This isnt picking a random colour per set for some reason
 }
