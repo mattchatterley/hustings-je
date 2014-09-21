@@ -26,8 +26,8 @@ class User
     {
         $db = new Database();
         
-        //$results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets where ScreenName='007Hammer'-- ORDER BY ScreenName");
-        $results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets ORDER BY ScreenName");
+        $results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets where ScreenName LIKE '%ozouf%' or ScreenName like '%lordpvb%' or ScreenName like '%onlyguru%'-- ORDER BY ScreenName");
+        //$results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets ORDER BY ScreenName");
         
         $users = Array();
         
