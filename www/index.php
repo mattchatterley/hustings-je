@@ -27,6 +27,8 @@
         <script src="assets/js/hustings-main.js"></script>
         <script src="assets/js/streamgraph.js"></script>
         <script src="assets/js/stackedbars.js"></script>
+        <script src="assets/js/Chart.min.js"></script>
+        <script src="assets/js/barchart.js"></script>
     </head>
     <body>
         <h1>hustings.je prototypes</h1>
@@ -129,6 +131,7 @@
                 <button onclick="updateVisuals();">Update</button>
             </fieldset>
             <div id="d3-placeholder"></div>
+            <canvas id="chart-placeholder" width="800" height="500"></canvas>
         <?php
 
             // TODO: UI - Validation

@@ -1,6 +1,6 @@
 function startStreamGraph(data)
 {
-console.debug(data);
+//console.debug(data);
 
 var n = data.length, // number of layers
     m = data[0].Values.length, // number of samples per layer
@@ -11,7 +11,7 @@ var n = data.length, // number of layers
     //layers0 = stack(d3.range(n).map(function() { return bumpLayer(m); })),
     //layers1 = stack(d3.range(n).map(function() { return bumpLayer(m); }));
 
-console.debug(data[0].Values);
+//console.debug(data[0].Values);
 
 var width = 960,
     height = 500;

@@ -107,7 +107,7 @@ class Engine
 //echo("timeAxisPoints = $timeAxisPoints");
 
         // TODO: Calculate a set of all required points for plotting, to be filled in for each row (e.g. all the hours listed if 'hour')
-        // Engien can then put in value, 0 or previous value depending on options
+        // Engine can then put in value, 0 or previous value depending on options
 
         // get results into expected format
         $objectResults = array();
@@ -207,6 +207,19 @@ class Engine
 
             $objectResults[$i] = $result;
         }
+
+        // calculate the x-axis slot labels and add to first result
+        $xAxis = array();
+        $current = strtotime($timeAxis["min_time"]);
+        while($current < strtotime($timeAxis["max_time"]))
+        {
+            $xAxis[] = date("Ymd His", $current);
+            $current += $timeSlotLengthSeconds;
+
+            // TODO: handle months
+        }
+
+        $objectResults[0]["Labels"] = $xAxis;
 
         $this->Results = $objectResults;
     }

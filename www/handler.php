@@ -46,7 +46,7 @@ if($_POST["range"] == "true")
 $timeslot = $_POST["timeslots"];
 
 // TODO: HACK THIS TO DAY TEMPORARY
-$timeslot = "hour";
+$timeslot = "day";
 /* Not sure we need this?
 switch($_POST["dataset"])
 {

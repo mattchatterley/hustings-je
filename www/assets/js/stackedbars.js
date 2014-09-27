@@ -14,7 +14,7 @@ var n = data.length, // number of layers
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-console.debug("n=" +n, "m=" +m);
+//console.debug("n=" +n, "m=" +m);
 
 var x = d3.scale.ordinal()
     .domain(d3.range(m))
