@@ -19,15 +19,12 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>    
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
 
-        <!-- D3js -->
-        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        
+        <!-- Chart.js -->        
+        <script src="assets/js/Chart.min.js"></script>
+
         <!-- Local -->
         <link rel="stylesheet" href="assets/css/hustings-je.css" />
         <script src="assets/js/hustings-main.js"></script>
-        <script src="assets/js/streamgraph.js"></script>
-        <script src="assets/js/stackedbars.js"></script>
-        <script src="assets/js/Chart.min.js"></script>
         <script src="assets/js/barchart.js"></script>
     </head>
     <body>

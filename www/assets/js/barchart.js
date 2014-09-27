@@ -1,5 +1,3 @@
-// id=chart-placeholder
-
 function startBarChart(rawData)
 {
     console.debug(rawData);
@@ -43,6 +41,8 @@ function startBarChart(rawData)
     var ctx = document.getElementById("chart-placeholder").getContext("2d");
     console.debug(ctx);
     var chart = new Chart(ctx).Bar(data); //, options);
+
+        // TODO: Need to add a key identifying which user is which line - somehow (TBD in JS as we know colours)
 }
 
 function getYCoordinate(element)
