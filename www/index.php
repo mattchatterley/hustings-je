@@ -83,17 +83,11 @@
             ?>
             <h2>Configurable graph(s)</h2>
             <fieldset>
-                <legend>Type of Graph</legend>
-                <input id="graph-type" name="graph-type" type="radio" value="streamgraph" checked/>StreamGraph
-                <input id="graph-type" name="graph-type" type="radio" value="pie" />Pie
-                <input id="graph-type" name="graph-type" type="radio" value="bars" />Bars
-            </fieldset>
-            <fieldset>
                 <legend>Participants</legend>
-                <input id="participant-everyone" class="participant-group" type="checkbox" value="all" checked/>Everyone
-                <input id="participant-most-popular" class="participant-group" type="checkbox" value="most" />Most Popular
-                <input id="participant-least-popular" class="participant-group" type="checkbox" value="least" />Least Popular
-                <br />
+                <input id="participant-everyone" class="participant-group" type="checkbox" value="all"/>Everyone
+                <input id="participant-most-frequent" class="participant-group" type="checkbox" value="most-frequent" checked/>Most Frequent
+                <!--<input id="participant-most-mentioned" class="participant-group" type="checkbox" value="least" />Most Mentioned-->
+                <!-- TODO: Offer specific user choice
                 <br />
                 <?php
                     foreach($users as $user)
@@ -102,20 +96,20 @@
                             <input class="participant" type="checkbox" value="<?php echo($user->ScreenName);?>" /><?php echo($user->Name . ' (' . $user->ScreenName . ')');?>
                         <?php
                     }
-                    ?>
+                    ?>-->
             </fieldset>
             <fieldset>
                 <legend>Time</legend>
-                <input id="time-all" type="radio" value="all" checked/>All
-                <input id="time-range" type="radio" value="from" />Date Range
-                <input id="date-from" type="text" class="datepicker"/> to <input id="date-to" type="text" class="datepicker"/>
+                <input id="time-all" name="time-type" type="radio" value="all"/>All
+                <input id="time-range" name="time-type" type="radio" value="from" checked />Date Range
+                <input id="date-from" type="text" class="datepicker" value="<?php echo(date("d/m/Y", time() - 60*60*24*7));?>"/> to <input id="date-to" type="text" class="datepicker" value="<?php echo(date("d/m/Y", time())); ?>"/>
             </fieldset>
             <fieldset>
                 <legend>Resolution</legend>
                 <select id="time-slot">
-                    <option value="month">Month</option>
+                    <!--<option value="month">Month</option>-->
                     <option value="week">Week</option>
-                    <option value="day">Day</option>
+                    <option value="day" selected>Day</option>
                     <option value="hour">Hour</option>
                 </select>
             </fieldset>
@@ -126,9 +120,15 @@
                     <option value="sentiment-over-time">Sentiment over Time</option>
                 </select>
             </fieldset>
+<!--            <fieldset>
+                <legend>Type of Graph</legend>
+                <input id="graph-type" name="graph-type" type="radio" value="streamgraph" checked/>Line
+                <input id="graph-type" name="graph-type" type="radio" value="pie" />Pie
+                <input id="graph-type" name="graph-type" type="radio" value="bars" />Bars
+            </fieldset>-->
             <fieldset>
-                <legend>Debugging</legend>
-                <button onclick="updateVisuals();">Update</button>
+                <legend>Ready?</legend>
+                <button onclick="updateVisuals();">Go!</button>
             </fieldset>
             <div id="d3-placeholder"></div>
             <canvas id="chart-placeholder-1" width="800" height="500"></canvas>

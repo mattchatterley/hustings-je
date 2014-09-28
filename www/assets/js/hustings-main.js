@@ -5,9 +5,7 @@ $(document).ready(function()
 });
 
 function updateVisuals()
-{
-    alert('updating...');
-    
+{    
     // prepare parameters
     var graphType = $('input:radio[name=graph-type]:checked').val();
     //alert(graphType);
@@ -19,6 +17,7 @@ function updateVisuals()
     }
     //alert(participantGroup);
     
+    /*
     var participants = $('input:checkbox.participant:checked');
 
     if(participants.length > 0)
@@ -28,7 +27,7 @@ function updateVisuals()
     else
     {
         participants = '';
-    }
+    }*/
     
     //alert(participants);
     
@@ -63,7 +62,7 @@ function updateVisuals()
         data: 
         {
             group: participantGroup,
-            participants: participants,
+            //participants: participants,
             range: dateRange,
             from: dateFrom,
             to: dateTo,

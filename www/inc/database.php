@@ -28,7 +28,7 @@ class Database
     {
         if($this->db)
         {
-            $result = $this->db->query($query) or die('Failed to execute Query');
+            $result = $this->db->query($query) or die('Failed to execute Query: ' . mysqli_error($this->db));
             return $result;
         }
     }

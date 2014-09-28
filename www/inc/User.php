@@ -26,8 +26,7 @@ class User
     {
         $db = new Database();
         
-        $results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets where ScreenName LIKE '%ozouf%' or ScreenName like '%lordpvb%' or ScreenName like '%onlyguru%'-- ORDER BY ScreenName");
-        //$results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets ORDER BY ScreenName");
+        $results = $db->Query("SELECT DISTINCT Name, ScreenName FROM ScoredTweets ORDER BY ScreenName");
         
         $users = Array();
         
@@ -39,7 +38,23 @@ class User
         return $users;
     }
     
-    // TODO: Most popular
-    // TODO: least popular
-    // TODO: set of csv usernames
+    static function MostFrequent()
+    {
+        $db = new Database();
+
+        $results = $db->Query("SELECT Name, ScreenName FROM ScoredTweets GROUP BY Name, ScreenName ORDER BY COUNT(TweetId) DESC LIMIT 10");
+        
+        $users = Array();
+
+        while($row = $results->fetch_assoc())
+        {
+            $users[] = new User($row);
+        }
+
+        return $users;
+    }
+
+    // TODO: most mentioned
+
+    // TODO: set of csv usernames? not sure where this is needed from
 }

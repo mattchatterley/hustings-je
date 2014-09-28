@@ -6,6 +6,8 @@
  */
 //include_once('inc/database.php');
 
+// TODO: Hook up date ranges
+
 class Engine
 {
     public $Participants;
@@ -64,7 +66,7 @@ class Engine
                 $timeSlotLengthSeconds = 1;
                 break;
         }
-                
+
         switch($this->DataSet)
         {
             // TODO: Can we set default where/group/etc so as to avoid repetition below?
@@ -86,7 +88,7 @@ class Engine
         }
         
         // execute query
-//echo($select . " " . $from . " " . $where . " " . $group . " " . $order . ";");
+//die($select . " " . $from . " " . $where . " " . $group . " " . $order . ";");
         $results = $this->db->query($select . " " . $from . " " . $where . " " . $group . " " . $order . ";");
 
         // calculate start and end point for time axis 
