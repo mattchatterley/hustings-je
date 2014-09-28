@@ -27,6 +27,7 @@
         <script src="assets/js/hustings-main.js"></script>
         <script src="assets/js/barchart.js"></script>
         <script src="assets/js/linechart.js"></script>
+        <script src="assets/js/charthelper.js"></script>
     </head>
     <body>
         <h1>hustings.je prototypes</h1>

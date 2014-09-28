@@ -31,7 +31,14 @@ function startLineChart(rawData, placeholderId)
 
         console.debug(dataset);
 
-        dataset.data = expandYValues(rawData[i].Values);
+        if(rawData[0].Multidimensional)
+        {
+            dataset.data = expandYValues(rawData[i].Values);
+        }
+        else
+        {
+            dataset.data = rawData[i].Values.map(getYCoordinate);
+        }
 
         data.datasets[i] = dataset;
     }
@@ -49,21 +56,6 @@ function startLineChart(rawData, placeholderId)
         // TODO: Need to add a key identifying which user is which line - somehow (TBD in JS as we know colours)
 }
 
-// TODO; This func is required by dataset, not graph type, tidy up
-
-function expandYValues(values)
-{
-    var expanded = new Array(values.length * 2);
-
-    var j = 0;
-    for(var i=0;i<values.length;i++)
-    {
-        expanded[j++] = values[i].y;
-        expanded[j++] = values[i].y1;
-    }
-
-    return expanded;
-}
 
 /*
 Example usage

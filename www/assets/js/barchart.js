@@ -29,7 +29,14 @@ function startBarChart(rawData, placeholderId)
 
         console.debug(dataset);
 
-        dataset.data = rawData[i].Values.map(getYCoordinate);
+        if(rawData[0].Multidimensional)
+        {
+            dataset.data = expandYValues(rawData[i].Values);
+        }
+        else
+        {
+            dataset.data = rawData[i].Values.map(getYCoordinate);
+        }
 
         data.datasets[i] = dataset;
     }
@@ -45,11 +52,6 @@ function startBarChart(rawData, placeholderId)
     var chart = new Chart(ctx).Bar(data, options);
 
         // TODO: Need to add a key identifying which user is which line - somehow (TBD in JS as we know colours)
-}
-
-function getYCoordinate(element)
-{
-    return element.y;
 }
 
 /*

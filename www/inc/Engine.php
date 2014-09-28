@@ -117,6 +117,8 @@ class Engine
         // TODO: Calculate a set of all required points for plotting, to be filled in for each row (e.g. all the hours listed if 'hour')
         // Engine can then put in value, 0 or previous value depending on options
 
+        $isMultidimentional = FALSE;
+
         // get results into expected format
         $objectResults = array();
 
@@ -170,6 +172,7 @@ class Engine
                 $this->Results = $objectResults;
                 break;
             case 'overall-sentiment-by-user':
+                $isMultidimentional = TRUE;
                 // do we have y0, y1 for positive + negative points, or do we just have x2 as many with duplicated x axis?
                 // x, y, name
 
@@ -222,7 +225,6 @@ class Engine
         }
 
         // make sure all result sets are the same length - they should all go up to $timeAxisPoints
-
         for($i = 0; $i < count($objectResults); $i++)
         {
             $result = $objectResults[$i];
@@ -263,6 +265,7 @@ class Engine
         }
 
         $objectResults[0]["Labels"] = $xAxis;
+        $objectResults[0]["Multidimensional"] = $isMultidimentional;
 
         $this->Results = $objectResults;
     }
