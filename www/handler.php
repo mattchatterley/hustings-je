@@ -42,6 +42,8 @@ if($_POST["range"] == "true")
     // TODO: Implement date range (from, to)
 }
 
+// TODO: Add toggle parameter for NLP vs Simple
+
 // TODO: Implement timeslot size (timeslots) - do we need to do anything more complicated?
 $timeslot = $_POST["timeslots"];
 

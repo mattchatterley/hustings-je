@@ -167,17 +167,6 @@ class Engine
         }
 
         // make sure all result sets are the same length - they should all go up to $timeAxisPoints
-        /*$maxPoints = 0;
-
-        foreach($objectResults as $result)
-        {
-            $count = count($result["Values"]);
-
-            $maxPoints = $count > $maxPoints ? $count : $maxPoints;
-        }*/
-
-//echo("maxPoints = " . $maxPoints);
-
 
         for($i = 0; $i < count($objectResults); $i++)
         {
@@ -188,35 +177,34 @@ class Engine
             for($j = 1; $j <= $timeAxisPoints; $j++)
             {
                 if(!in_array($j, $xAxisKeys))
-                //if(!array_key_exists($j, $result["Values"]))
                 {
                     // TODO: If we set the default value to 0, it breaks the graphs (not sure why) - we may need to add 1 to all other values to compensate?
-                    $result["Values"][] = array('x'=>$j, 'y'=>1);
+                    $result["Values"][] = array('x'=>$j, 'y'=>0);
                 }            
             }
 
             usort($result["Values"], 'sort_by_x_axis');
-            //asort($result["Values"]);
-
-            // the above is wrong a it's putting the extras in the wrong place, wrong order and it's not the right values
-
-            /*while(count($result["Values"]) < $timeAxisPoints)
-            {
-                $result["Values"][] = array('x'=>0, 'y'=>0);
-            }*/
 
             $objectResults[$i] = $result;
         }
 
         // calculate the x-axis slot labels and add to first result
         $xAxis = array();
-        $current = strtotime($timeAxis["min_time"]);
-        while($current < strtotime($timeAxis["max_time"]))
-        {
-            $xAxis[] = date("Ymd His", $current);
-            $current += $timeSlotLengthSeconds;
 
-            // TODO: handle months
+        if($this->TimeSlot != 'month')
+        {
+            $current = strtotime($timeAxis["min_time"]);
+            while($current < strtotime($timeAxis["max_time"]))
+            {
+                $xAxis[] = date("Ymd His", $current);
+                $current += $timeSlotLengthSeconds;
+
+                // TODO: handle months
+            }            
+        }
+        else
+        {
+            die('month not supported');
         }
 
         $objectResults[0]["Labels"] = $xAxis;
