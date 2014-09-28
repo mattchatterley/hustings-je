@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="assets/css/hustings-je.css" />
         <script src="assets/js/hustings-main.js"></script>
         <script src="assets/js/barchart.js"></script>
+        <script src="assets/js/linechart.js"></script>
     </head>
     <body>
         <h1>hustings.je prototypes</h1>
@@ -120,6 +121,7 @@
             <fieldset>
                 <legend>Data Set</legend>
                 <select id="dataset">
+                    <option value="overall-sentiment-by-user">Overall Sentiment by User</option>
                     <option value="sentiment-over-time">Sentiment over Time</option>
                 </select>
             </fieldset>
@@ -128,7 +130,8 @@
                 <button onclick="updateVisuals();">Update</button>
             </fieldset>
             <div id="d3-placeholder"></div>
-            <canvas id="chart-placeholder" width="800" height="500"></canvas>
+            <canvas id="chart-placeholder-1" width="800" height="500"></canvas>
+            <canvas id="chart-placeholder-2" width="800" height="500"></canvas>
         <?php
 
             // TODO: UI - Validation

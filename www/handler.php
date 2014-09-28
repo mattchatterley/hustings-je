@@ -44,6 +44,10 @@ if($_POST["range"] == "true")
 
 // TODO: Add toggle parameter for NLP vs Simple
 
+// TODO: Add parameter to determine if participants are "mentioned" or "tweeting themselves"
+
+// TODO: DEfault to last week, by day
+
 // TODO: Implement timeslot size (timeslots) - do we need to do anything more complicated?
 $timeslot = $_POST["timeslots"];
 

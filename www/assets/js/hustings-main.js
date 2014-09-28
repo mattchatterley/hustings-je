@@ -72,7 +72,8 @@ function updateVisuals()
         },
         success: function(data, textStatus, xhr)
         {
-            startBarChart(data);
+            startBarChart(data, 'chart-placeholder-1');
+            startLineChart(data, 'chart-placeholder-2');
         },
         error: function (xhr, textStatus, errorThrown)
         {

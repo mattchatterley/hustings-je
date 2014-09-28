@@ -1,4 +1,4 @@
-function startBarChart(rawData, placeholderId)
+function startLineChart(rawData, placeholderId)
 {
     console.debug(rawData);
 //    var n = data.length, // number of layers
@@ -22,14 +22,16 @@ function startBarChart(rawData, placeholderId)
 
         console.debug(rnd);
 
-        dataset.fillColor = "rgba("+rnd+",0,0,0.5)";
+        dataset.fillColor = "rgba(0,0,0,0)";
         dataset.strokeColor = "rgba("+rnd+",0,0,0.8)";
-        dataset.highlightFill = "rgba("+rnd+",0,0,0.75)";
-        dataset.highlightStroke = "rgba("+rnd+",0,0,1)";
+        pointColor = "rgba("+rnd+",220,220,1)",
+        pointStrokeColor = "#fff",
+        pointHighlightFill = "#fff",
+        pointHighlightStroke = "rgba("+rnd+",220,220,1)",
 
         console.debug(dataset);
 
-        dataset.data = rawData[i].Values.map(getYCoordinate);
+        dataset.data = expandYValues(rawData[i].Values);
 
         data.datasets[i] = dataset;
     }
@@ -42,14 +44,25 @@ function startBarChart(rawData, placeholderId)
 
     var ctx = document.getElementById(placeholderId).getContext("2d");
     console.debug(ctx);
-    var chart = new Chart(ctx).Bar(data, options);
+    var chart = new Chart(ctx).Line(data, options);
 
         // TODO: Need to add a key identifying which user is which line - somehow (TBD in JS as we know colours)
 }
 
-function getYCoordinate(element)
+// TODO; This func is required by dataset, not graph type, tidy up
+
+function expandYValues(values)
 {
-    return element.y;
+    var expanded = new Array(values.length * 2);
+
+    var j = 0;
+    for(var i=0;i<values.length;i++)
+    {
+        expanded[j++] = values[i].y;
+        expanded[j++] = values[i].y1;
+    }
+
+    return expanded;
 }
 
 /*

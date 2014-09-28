@@ -15,8 +15,8 @@ $users = User::All();
 
 $from = date('Y-m-d H:i:s', 0);
 $to = date('Y-m-d H:i:s', time());
-$timeslot = 'hour';
-$dataset = 'sentiment-over-time';
+$timeslot = 'day';
+$dataset = 'overall-sentiment-by-user';
 
 echo("Calling Engine...");
 
