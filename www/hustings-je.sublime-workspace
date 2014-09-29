@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"array"
+			],
+			[
 				"max",
 				"maxPoints"
 			],
@@ -32,18 +36,10 @@
 	"buffers":
 	[
 		{
-			"file": "assets/js/streamgraph.js",
-			"settings":
-			{
-				"buffer_size": 2878,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "handler.php",
 			"settings":
 			{
-				"buffer_size": 1483,
+				"buffer_size": 1162,
 				"line_ending": "Windows"
 			}
 		},
@@ -51,23 +47,49 @@
 			"file": "assets/js/hustings-main.js",
 			"settings":
 			{
-				"buffer_size": 2183,
+				"buffer_size": 2109,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "inc/database.php",
+			"file": "assets/js/barchart.js",
 			"settings":
 			{
-				"buffer_size": 725,
+				"buffer_size": 4181,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/charthelper.js",
+			"settings":
+			{
+				"buffer_size": 306,
+				"line_ending": "Windows",
+				"name": "charthelper.js"
+			}
+		},
+		{
+			"file": "assets/js/linechart.js",
+			"settings":
+			{
+				"buffer_size": 1693,
+				"line_ending": "Windows",
+				"name": "linechart.js"
 			}
 		},
 		{
 			"file": "inc/Engine.php",
 			"settings":
 			{
-				"buffer_size": 6948,
+				"buffer_size": 10974,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/User.php",
+			"settings":
+			{
+				"buffer_size": 1297,
 				"line_ending": "Windows"
 			}
 		},
@@ -75,7 +97,7 @@
 			"file": "test/EngineTest.php",
 			"settings":
 			{
-				"buffer_size": 704,
+				"buffer_size": 718,
 				"line_ending": "Windows",
 				"name": "EngineTest.php"
 			}
@@ -84,15 +106,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 6510,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "inc/User.php",
-			"settings":
-			{
-				"buffer_size": 1039,
+				"buffer_size": 7059,
 				"line_ending": "Windows"
 			}
 		}
@@ -124,14 +138,19 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Work/GitHub/hustings-je/www",
-		"/E/Work/GitHub/hustings-je/www/assets",
-		"/E/Work/GitHub/hustings-je/www/assets/js",
-		"/E/Work/GitHub/hustings-je/www/inc",
-		"/E/Work/GitHub/hustings-je/www/test"
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc"
 	],
 	"file_history":
 	[
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/database.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/barchart.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/streamgraph.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/stackedbars.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/User.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/Chart.min.js",
 		"/C/Work/Dropbox/MATTCHEDIT/upgrade_notes.txt",
 		"/C/Users/mattc/Downloads/contact-form-7.3.9.3/contact-form-7/includes/contact-form.php",
 		"/C/Users/mattc/Downloads/contact-form-7.3.9.3/contact-form-7/wp-contact-form-7.php",
@@ -191,7 +210,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -254,54 +273,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "assets/js/streamgraph.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2878,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								853,
-								853
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 76.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "handler.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1483,
+						"buffer_size": 1162,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								956,
-								956
+								390,
+								390
 							]
 						],
 						"settings":
@@ -311,7 +300,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/js/hustings-main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 104.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -319,19 +338,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "assets/js/hustings-main.js",
+					"file": "assets/js/barchart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2183,
+						"buffer_size": 4181,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1349,
-								1349
+								1490,
+								1490
 							]
 						],
 						"settings":
@@ -341,148 +360,87 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 483.0,
+						"translation.y": 376.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "inc/database.php",
+					"file": "assets/js/charthelper.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 725,
+						"buffer_size": 306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								107,
-								116
+								306,
+								306
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": "charthelper.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "inc/Engine.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6948,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3675,
-								3675
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 990.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "test/EngineTest.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 704,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								348,
-								348
-							]
-						],
-						"settings":
-						{
-							"auto_name": "EngineTest.php",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6510,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1122,
-								1122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "inc/User.php",
+					"buffer": 4,
+					"file": "assets/js/linechart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1039,
+						"buffer_size": 1693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								754,
-								754
+								1690,
+								1690
+							]
+						],
+						"settings":
+						{
+							"auto_name": "linechart.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 494.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "inc/Engine.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
 							]
 						],
 						"settings":
@@ -496,6 +454,97 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "inc/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1166,
+								1166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 118.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "test/EngineTest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"auto_name": "EngineTest.php",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2737,
+								2737
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 962.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
