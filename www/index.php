@@ -2,7 +2,7 @@
 <?php
     include_once('inc/database.php');
     include_once('inc/User.php');
-  
+
     error_reporting(E_ALL);
 
     $database = new Database();
@@ -10,27 +10,52 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <title>hustings.je prototype</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Data.je">
+        <link rel="icon" href="favicon.ico">
+        <title>Hustings.je &raquo; Jersey Hustings data portal</title>
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
         <!-- jQuery UI -->
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>    
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
 
-        <!-- Chart.js -->        
+        <!-- Chart.js -->
         <script src="assets/js/Chart.min.js"></script>
 
         <!-- Local -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/hustings-je.css" />
+        <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/hustings-main.js"></script>
         <script src="assets/js/barchart.js"></script>
         <script src="assets/js/linechart.js"></script>
         <script src="assets/js/charthelper.js"></script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
     </head>
     <body>
-        <h1>hustings.je prototypes</h1>
+
+       <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                        <div class="inner">
+                                <h1 class="masthead-brand">Hustings.je</h1>
+                        </div>
+                </div>
         <h2>Table of data (latest 10 tweets)</h2>
         <?php
             $result = $database->Query("SELECT * from ScoredTweets ORDER BY Timestamp DESC LIMIT 10");
@@ -76,7 +101,7 @@
             }
         ?>
             </table>
-            
+
             <?php
                 // prepare data for parameters
                 $users = User::All();
@@ -139,7 +164,7 @@
 
             // TODO: When a user group (e.g. everyone, etc) is picked, uncheck all others
             // TODO: When an individual user is checked, remove all groups
-        
+
             // TODO: Populate all datasets
 
             // TODO: Line of user tweets/time, with sentiment (flow)
@@ -161,12 +186,30 @@
             // TODO: Include mentioning in schema e.g. tweet mentions users x y z
 
             // TODO: Ability to record events e.g. hustings?
-        
+
             /* General thoughts
-             * 
+             *
              * Flexible graph which has dimensions such as time and sentiment and allows you to add in datasets or users?
-             * 
+             *
              */
         ?>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <div class="pull-right">
+                    <ul class="social-buttons">
+                    <li class="follow-btn">
+                    <a href="https://twitter.com/hustingsje" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @hustingsje</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li>
+                    </ul>
+                    </div>
+                <p>&copy; Copyright 2014 <a href="http://www.hustings.je">hustings.je</a>, site by <a href="https://twitter.com/techtribesje">@techtribesje</a>.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
     </body>
 </html>

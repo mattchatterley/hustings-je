@@ -17,13 +17,13 @@ background-color: #333;
 }
 body {
 color: #fff;
-text-align: center;
+text-align: left;
 text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
 display: table;
-width: 100%;
+width:100%;
 height: 100%; /* For at least Firefox */
 min-height: 100%;
 -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
@@ -36,10 +36,13 @@ vertical-align: top;
 .cover-container {
 margin-right: auto;
 margin-left: auto;
+width: 96%;
+padding:0px 2%;
 }
 /* Padding for spacing */
 .inner {
 padding: 30px;
+
 }
 /*
 * Header
@@ -49,7 +52,7 @@ margin-top:0;
 width:222px;
 height:46px;
 text-indent:-99999px;
-background: transparent url(logo.png) no-repeat top left;
+background: transparent url(../img/logo.png) no-repeat top left;
 }
 /*
 * Cover
@@ -93,12 +96,7 @@ width: 100%; /* Must be percentage or pixels for horizontal alignment */
 }
 }
 @media (min-width: 992px) {
-.masthead,
-.mastfoot,
-.cover-container {
-width: 700px;
-}
-}
+
 .social-buttons {
 display: inline-block;
 padding-left: 0;
