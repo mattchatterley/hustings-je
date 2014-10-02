@@ -77,11 +77,11 @@ color: rgba(255,255,255,.5);
 @media (min-width: 768px) {
 /* Pull out the header and footer */
 .masthead {
-position: fixed;
+position: relative;
 top: 0;
 }
 .mastfoot {
-position: fixed;
+position: relative;
 bottom: 0;
 }
 /* Start the vertical centering */

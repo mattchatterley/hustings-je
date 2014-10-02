@@ -56,6 +56,8 @@
                                 <h1 class="masthead-brand">Hustings.je</h1>
                         </div>
                 </div>
+
+            <div>
         <h2>Table of data (latest 10 tweets)</h2>
         <?php
             $result = $database->Query("SELECT * from ScoredTweets ORDER BY Timestamp DESC LIMIT 10");
@@ -193,7 +195,7 @@
              *
              */
         ?>
-
+</div>
             <div class="mastfoot">
                 <div class="inner">
                     <div class="pull-right">

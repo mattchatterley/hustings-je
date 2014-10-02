@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"EMail",
+				"EmailAddress"
+			],
+			[
+				"Po",
+				"ProfileFields"
+			],
+			[
 				"a",
 				"array"
 			],
@@ -36,77 +44,50 @@
 	"buffers":
 	[
 		{
-			"file": "handler.php",
+			"file": "/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
 			"settings":
 			{
-				"buffer_size": 1162,
+				"buffer_size": 4794,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/username.php",
+			"settings":
+			{
+				"buffer_size": 305,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "assets/js/hustings-main.js",
+			"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/user.php",
 			"settings":
 			{
-				"buffer_size": 2109,
+				"buffer_size": 1189,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "assets/js/barchart.js",
+			"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/info.php",
 			"settings":
 			{
-				"buffer_size": 4181,
+				"buffer_size": 1745,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "assets/js/charthelper.js",
+			"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/themes/cbs-the-hive/views/modules/userinfo.php",
 			"settings":
 			{
-				"buffer_size": 306,
-				"line_ending": "Windows",
-				"name": "charthelper.js"
-			}
-		},
-		{
-			"file": "assets/js/linechart.js",
-			"settings":
-			{
-				"buffer_size": 1693,
-				"line_ending": "Windows",
-				"name": "linechart.js"
-			}
-		},
-		{
-			"file": "inc/Engine.php",
-			"settings":
-			{
-				"buffer_size": 10974,
+				"buffer_size": 3172,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "inc/User.php",
+			"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/class.profileextender.plugin.php",
 			"settings":
 			{
-				"buffer_size": 1297,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "test/EngineTest.php",
-			"settings":
-			{
-				"buffer_size": 718,
-				"line_ending": "Windows",
-				"name": "EngineTest.php"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 7059,
+				"buffer_size": 11372,
 				"line_ending": "Windows"
 			}
 		}
@@ -145,11 +126,26 @@
 	],
 	"file_history":
 	[
-		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/database.php",
+		"/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/views/profilefields.php",
+		"/C/inetpub/hive-dev/applications/dashboard/views/modules/activityfilter.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/modules/discussionfilter.php",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/controllers/class.activitycontroller.php",
+		"/C/inetpub/hive-dev/applications/dashboard/views/activity/all.php",
+		"/C/inetpub/hive-dev/applications/dashboard/controllers/class.entrycontroller.php",
+		"/C/Work/Dropbox/Mattched IT/Work in Progress/hive_userpaymentreminder.txt",
+		"/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/RegistrationNotification/class.registrationnotification.plugin.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/handler.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/hustings-main.js",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/barchart.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/charthelper.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/linechart.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/Engine.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/User.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/test/EngineTest.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/index.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/database.php",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/streamgraph.js",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/stackedbars.js",
-		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/User.php",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/Chart.min.js",
 		"/C/Work/Dropbox/MATTCHEDIT/upgrade_notes.txt",
 		"/C/Users/mattc/Downloads/contact-form-7.3.9.3/contact-form-7/includes/contact-form.php",
@@ -184,7 +180,6 @@
 		"/C/inetpub/hive-dev/conf/config.php",
 		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/discussions.php",
 		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
-		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/modules/discussionfilter.php",
 		"/C/inetpub/hive-dev/plugins/HiveMemberList/class.hivememberlist.plugin.php",
 		"/C/inetpub/hive-dev/plugins/FileUpload/class.fileupload.plugin.php",
 		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/table.php",
@@ -224,6 +219,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"signin'",
 			"related",
 			"related_",
 			"related",
@@ -273,64 +269,62 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "handler.php",
+					"file": "/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1162,
+						"buffer_size": 4794,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								390,
-								390
+								724,
+								724
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 320.0,
+						"translation.y": 126.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "assets/js/hustings-main.js",
+					"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/username.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2109,
+						"buffer_size": 305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								399,
-								399
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 104.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -338,176 +332,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "assets/js/barchart.js",
+					"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/user.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4181,
+						"buffer_size": 1189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1490,
-								1490
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 376.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "assets/js/charthelper.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 306,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								306,
-								306
-							]
-						],
-						"settings":
-						{
-							"auto_name": "charthelper.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "assets/js/linechart.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1693,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1690,
-								1690
-							]
-						],
-						"settings":
-						{
-							"auto_name": "linechart.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 494.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "inc/Engine.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10974,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								124,
-								124
+								521,
+								523
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "inc/User.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1166,
-								1166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 118.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "test/EngineTest.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 718,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268,
-								268
-							]
-						],
-						"settings":
-						{
-							"auto_name": "EngineTest.php",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 3,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -518,33 +361,93 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "index.php",
+					"buffer": 3,
+					"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/info.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7059,
+						"buffer_size": 1745,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2737,
-								2737
+								461,
+								461
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 3,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 962.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/themes/cbs-the-hive/views/modules/userinfo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1108,
+								1108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/class.profileextender.plugin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7073,
+								7073
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2129.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
