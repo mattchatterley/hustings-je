@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"dark",
+				"darkColour"
+			],
+			[
+				"light",
+				"lightColour"
+			],
+			[
+				"Mul",
+				"multi"
+			],
+			[
 				"EMail",
 				"EmailAddress"
 			],
@@ -44,50 +56,51 @@
 	"buffers":
 	[
 		{
-			"file": "/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 4794,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/username.php",
-			"settings":
-			{
-				"buffer_size": 305,
+				"buffer_size": 11166,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/user.php",
+			"file": "faq.htm",
 			"settings":
 			{
-				"buffer_size": 1189,
+				"buffer_size": 4581,
+				"line_ending": "Windows",
+				"name": "faq.htm"
+			}
+		},
+		{
+			"file": "inc/Engine.php",
+			"settings":
+			{
+				"buffer_size": 11194,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/info.php",
+			"file": "handler.php",
 			"settings":
 			{
-				"buffer_size": 1745,
+				"buffer_size": 1163,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/themes/cbs-the-hive/views/modules/userinfo.php",
+			"file": "assets/js/hustings-main.js",
 			"settings":
 			{
-				"buffer_size": 3172,
+				"buffer_size": 2566,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/class.profileextender.plugin.php",
+			"file": "assets/js/linechart.js",
 			"settings":
 			{
-				"buffer_size": 11372,
+				"buffer_size": 3653,
 				"line_ending": "Windows"
 			}
 		}
@@ -121,11 +134,25 @@
 	[
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/css",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc"
 	],
 	"file_history":
 	[
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/linechart.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/charthelper.js",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/css/hustings-je.css",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/about.htm",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/css/style.css",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/User.php",
+		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/Chart.js",
+		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
+		"/C/inetpub/hive-dev/applications/dashboard/views/profile/username.php",
+		"/C/inetpub/hive-dev/applications/dashboard/views/profile/user.php",
+		"/C/inetpub/hive-dev/applications/dashboard/views/profile/info.php",
+		"/C/TFS/Clients/Claire Boscq-Scott/hive/themes/cbs-the-hive/views/modules/userinfo.php",
+		"/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/class.profileextender.plugin.php",
 		"/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/views/profilefields.php",
 		"/C/inetpub/hive-dev/applications/dashboard/views/modules/activityfilter.php",
 		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/modules/discussionfilter.php",
@@ -137,10 +164,7 @@
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/handler.php",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/hustings-main.js",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/barchart.js",
-		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/charthelper.js",
-		"/C/Users/mattc/Documents/GitHub/hustings-je/www/assets/js/linechart.js",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/Engine.php",
-		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/User.php",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/test/EngineTest.php",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/index.php",
 		"/C/Users/mattc/Documents/GitHub/hustings-je/www/inc/database.php",
@@ -179,7 +203,6 @@
 		"/C/Users/mattc/Downloads/facebook-php-sdk-v4-4.0-dev/facebook-php-sdk-v4-4.0-dev/autoload.php",
 		"/C/inetpub/hive-dev/conf/config.php",
 		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/discussions.php",
-		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
 		"/C/inetpub/hive-dev/plugins/HiveMemberList/class.hivememberlist.plugin.php",
 		"/C/inetpub/hive-dev/plugins/FileUpload/class.fileupload.plugin.php",
 		"/C/inetpub/hive-dev/themes/cbs-the-hive/views/categories/table.php",
@@ -219,6 +242,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rLight",
+			"labels",
+			"tooltiplabels",
+			"multitooltiptemplate",
+			"datasets",
+			"getycoord",
+			"input",
+			"legend",
 			"signin'",
 			"related",
 			"related_",
@@ -253,11 +284,13 @@
 			"Notification"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"rDark",
+			"            dataset.fillColor = \"rgba(0,0,0,0)\";\n            dataset.strokeColor = \"rgba(\"+rLight+\",\"+gLight+\",\"+bLight+\",0.8)\";\n            pointColor = \"rgba(\"+rLight+\",\"+gLight+\",\"+bLight+\",1)\",\n            pointStrokeColor = \"#fff\",\n            pointHighlightFill = \"#fff\",\n            pointHighlightStroke = \"rgba(\"+rLight+\",\"+gLight+\",\"+bLight+\",1)\",",
 			">\n      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>\n    </None>"
 		],
 		"reverse": false,
@@ -274,83 +307,114 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/inetpub/hive-dev/themes/cbs-the-hive/views/default.master.tpl",
+					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4794,
+						"buffer_size": 11166,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								724,
-								724
+								8231,
+								8231
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 126.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/username.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2076.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/user.php",
+					"buffer": 1,
+					"file": "faq.htm",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1189,
+						"buffer_size": 4581,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								521,
-								523
+								2188,
+								3548
+							]
+						],
+						"settings":
+						{
+							"auto_name": "faq.htm",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 501.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "inc/Engine.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7701,
+								7711
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 3,
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2402.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "handler.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								398,
+								398
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -361,90 +425,60 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/C/inetpub/hive-dev/applications/dashboard/views/profile/info.php",
+					"buffer": 4,
+					"file": "assets/js/hustings-main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1745,
+						"buffer_size": 2566,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								461,
-								461
+								2151,
+								2151
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 3,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 481.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/themes/cbs-the-hive/views/modules/userinfo.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1108,
-								1108
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "/C/TFS/Clients/Claire Boscq-Scott/hive/plugins/ProfileExtender/class.profileextender.plugin.php",
+					"file": "assets/js/linechart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11372,
+						"buffer_size": 3653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7073,
-								7073
+								3482,
+								3482
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2129.0,
+						"translation.y": 888.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -491,7 +525,7 @@
 	"project": "hustings-je.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
