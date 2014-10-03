@@ -30,6 +30,7 @@
 
         <!-- Chart.js -->
         <script src="assets/js/Chart.min.js"></script>
+        <!--<script src="assets/js/Chart.js"></script>-->
 
         <!-- Local -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -58,11 +59,26 @@
                 </div>
 
             <div>
+            <p>
+                Hustings.je is an experiment in applying sentiment-analysis to social media during the Jersey 2014 elections. What can we learn about candidates from their tweets, and tweets mentioning them?
+                <br/><br/>
+                It is a <a href="http://www.techtribes.je" target="_blank">TechTribes.je</a> production, featuring:
+            </p>
+            <ul>
+                <li>Data Monkey: Charles Robertson (<a href="http://twitter.com/charles_jsy" target="_blank">@charles_jsy</a>)</li>
+                <li>Web Monkey: Matt Chatterley (<a href="http://twitter.com/mattchedit" target="_blank">@mattchedit</a>)</li>
+                <li>Graphics Monkey: Robbie Andrews (<a href="http://twitter.com/bearpig" target="_blank">@bearpig</a>)</li>
+            </ul>
+            </p>
+            <p>
+                This site is under continual development and if there is something in particular you'd like to see, please let us know.
+            </p>
+            <p>
+                Questions? <a href="faq.htm">Click here!</a>
+            </p>
             <div>
-                Put a welcome message here.
-                <br><br>
-                Give a brief explanation of what stuff does and that it'll be added to
-            </div>
+                Key stats here - # of tweets, etc
+            </div>            
         <?php
             if(!empty($_GET["debug"]))
             {
@@ -146,7 +162,7 @@
                     <!--<option value="month">Month</option>-->
                     <option value="week">Week</option>
                     <option value="day" selected>Day</option>
-                    <<option value="hour">Hour</option>
+                    <option value="hour">Hour</option>
                 </select>
             </fieldset>
             <fieldset>
@@ -168,7 +184,10 @@
             </fieldset>
             <div id="d3-placeholder"></div>
             <canvas id="chart-placeholder" width="800" height="500"></canvas>
+            <div id="chart-placeholder-legend"></div>
         <?php
+
+        // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
 
             // TODO: UI - Validation
 

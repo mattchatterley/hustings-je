@@ -38,11 +38,16 @@ class User
         return $users;
     }
     
-    static function MostFrequent()
+    static function MostFrequent($limit)
     {
         $db = new Database();
 
-        $results = $db->Query("SELECT Name, ScreenName FROM ScoredTweets GROUP BY Name, ScreenName ORDER BY COUNT(TweetId) DESC LIMIT 10");
+        if(empty($limit))
+        {
+            $limit = "10";
+        }
+
+        $results = $db->Query("SELECT Name, ScreenName FROM ScoredTweets GROUP BY Name, ScreenName ORDER BY COUNT(TweetId) DESC LIMIT $limit");
         
         $users = Array();
 

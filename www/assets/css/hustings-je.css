@@ -33,3 +33,23 @@ h2
 	margin-top: 10px;
 	background-color: #ffffff;
 }
+
+#chart-placeholder-legend
+{
+	float:right;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+#chart-placeholder-legend ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#chart-placeholder-legend span
+{
+	width: 30px;
+	height: 30px;
+	display:inline-block;

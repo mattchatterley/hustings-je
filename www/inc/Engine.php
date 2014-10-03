@@ -255,7 +255,15 @@ class Engine
             $current = strtotime($timeAxis["min_time"]);
             while($current < strtotime($timeAxis["max_time"]))
             {
-                $xAxis[] = date("Ymd His", $current);
+                if($this->TimeSlot != "hour")
+                {
+                    $xAxis[] = date("d/m/Y", $current);
+                }
+                else
+                {
+                    $xAxis[] = date("d/m/Y H:i:s", $current);                
+                }
+
                 $current += $timeSlotLengthSeconds;
 
                 // TODO: handle months

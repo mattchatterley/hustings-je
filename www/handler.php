@@ -17,7 +17,7 @@ if(strlen($_POST["group"]) > 0)
             $users = User::All();
             break;
         case "most-frequent":
-            $users = User::MostFrequent();
+            $users = User::MostFrequent(3);
             break;
         case "most-mentioned":
             // TODO: Implement 'least'

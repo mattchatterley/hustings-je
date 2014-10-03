@@ -1,27 +1,38 @@
 function startLineChart(rawData, placeholderId)
 {
     console.debug(rawData);
+    console.debug(rawData[0]);
 //    var n = data.length, // number of layers
 //    m = data[0].Values.length, // number of samples per layer
 
     var data = {
-        labels: new Array(rawData[0].Values.length),
-        datasets: new Array(rawData.length)
+        labels: new Array(rawData[0].Labels.length),
+        datasets: new Array(0)
     };
 
+//console.debug(rawData[0].Labels.length);
+//console.debug(rawData.length);
     // set labels
     data.labels = rawData[0].Labels;
 
+    // figure out how to allocate colours, based on a range of 80-255
+    var startColour = 80;
+    var available = 255 - startColour;
+    var perStep = Math.floor(available / rawData.length);
+
+    var current = startColour;
+//console.debug(current);
+//console.debug(perStep);
     // create datasets
     for(var i=0;i<rawData.length;i++)
     {
         var dataset = {};
-        dataset.label = "DataSet " + (i+1); // change to real data
+        dataset.label = "@" + rawData[i].ScreenName + ( rawData[0].Multidimensional ? " - positive" : "");
 
-        var rnd = 75 + parseInt(Math.random() * (255-75), 10);
-
-        console.debug(rnd);
-
+        //var rnd = 75 + parseInt(Math.random() * (255-75), 10);
+        var rnd=current;
+        current += perStep;
+//console.debug(rnd);
         dataset.fillColor = "rgba(0,0,0,0)";
         dataset.strokeColor = "rgba("+rnd+",0,0,0.8)";
         pointColor = "rgba("+rnd+",220,220,1)",
@@ -29,31 +40,51 @@ function startLineChart(rawData, placeholderId)
         pointHighlightFill = "#fff",
         pointHighlightStroke = "rgba("+rnd+",220,220,1)",
 
-        console.debug(dataset);
+        dataset.data = rawData[i].Values.map(getYCoordinate);
+        //console.debug(dataset.data);
+
+        data.datasets.push(dataset);
 
         if(rawData[0].Multidimensional)
         {
-            dataset.data = expandYValues(rawData[i].Values);
-        }
-        else
-        {
-            dataset.data = rawData[i].Values.map(getYCoordinate);
-        }
+            //console.debug("multi - adding 2nd set");
+            var dataset = {};
+        dataset.label = "@" + rawData[i].ScreenName + ( rawData[0].Multidimensional ? " - negative" : "");
 
-        data.datasets[i] = dataset;
+            var rnd = 75 + parseInt(Math.random() * (255-75), 10);
+
+            dataset.fillColor = "rgba(0,0,0,0)";
+            dataset.strokeColor = "rgba(0,0,"+rnd+",0.8)";
+            pointColor = "rgba(220,220,"+rnd+",1)",
+            pointStrokeColor = "#fff",
+            pointHighlightFill = "#fff",
+            pointHighlightStroke = "rgba(220,220,"+rnd+",1)",
+
+            dataset.data = rawData[i].Values.map(getYCoordinate2);
+            //console.debug(dataset.data);
+
+            data.datasets.push(dataset);
+        }        
     }
 
-    console.debug(data);
+    Chart.defaults.global.animationSteps = 30;
+
+//    console.debug(data);
 
     var options = {
-        scaleBeginAtZero: false
+        scaleBeginAtZero: false,
+        datasetFill: false,
+        showTooltips: true,
+        multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>",
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\">&nbsp;</span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
     };
 
     var ctx = document.getElementById(placeholderId).getContext("2d");
-    console.debug(ctx);
+  //  console.debug(ctx);
     var chart = new Chart(ctx).Line(data, options);
 
+    var legend = chart.generateLegend();
+    console.debug(legend);
+    $('#' + placeholderId + "-legend").append(legend);
         // TODO: Need to add a key identifying which user is which line - somehow (TBD in JS as we know colours)
-
-        // TODO: Not convinced current method of one up one down is right, we should really have a red layer (positive) and a blue (negative)???
 }

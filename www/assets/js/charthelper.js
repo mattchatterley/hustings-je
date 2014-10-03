@@ -16,3 +16,8 @@ function getYCoordinate(element)
 {
     return element.y;
 }
+
+function getYCoordinate2(element)
+{
+    return element.y1;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<?php
+
+    include_once('inc/database.php');
+    include_once('inc/User.php');
+
+    error_reporting(E_ALL);
+
+    $database = new Database();
+?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Data.je">
+        <link rel="icon" href="favicon.ico">
+        <title>Hustings.je &raquo; Jersey Hustings data portal</title>
+
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- jQuery UI -->
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+        <!-- Local -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/hustings-je.css" />
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+       <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                        <div class="inner">
+                                <h1 class="masthead-brand">Hustings.je</h1>
+                        </div>
+                </div>
+
+            <div>
+            <p>
+				FAQ
+				1.       How does it work? We have a Hadoop cluster in AWS that is collecting and analysing the tweets, then pushing them out to the website. All the source code is here [link] if you want to see for yourself.
+
+				2.       How do you analyse sentiment? There are two methods: simple (or “bag of words”) and NLP. The simple methods score individual words as either positive, neutral or negative, and the score for a tweet is simply added to give an overall score. NLP stands for Natural Language Processing. We use the Stanford University NLP Group’s CoreNLP suite of tools (http://nlp.stanford.edu/software/corenlp.shtml). This uses a neural network trained on movie reviews to generate the sentiment scores. This is currently the most accurate machine-learning algorithm for sentiment scoring.
+
+				3.       I found one you got wrong??!?! Yeah, that’ll happen. Neither simple nor NLP scoring is a 100% accurate process. Stanford have claimed an 85% accuracy for their sentiment analyser. We will be testing the accuracy of it in this context.
+
+				4.       You’ve made it biased against/for XYZ haven’t you? No, we really haven’t. We’re good, but not good enough to introduce subtle-yet-influential-but-impossible-to-find biases. All the source code is here [link] so you can verify it all for yourself. Let us know if you want a hand.            
+			</p>
+</div>
+            <div class="mastfoot">
+                <div class="inner">
+                    <div class="pull-right">
+                    <ul class="social-buttons">
+                    <li class="follow-btn">
+                    <a href="https://twitter.com/hustingsje" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @hustingsje</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </li>
+                    </ul>
+                    </div>
+                <p>&copy; Copyright 2014 <a href="http://www.hustings.je">hustings.je</a>, site by <a href="https://twitter.com/techtribesje">@techtribesje</a>.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    </body>
+</html>
