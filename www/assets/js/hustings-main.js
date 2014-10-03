@@ -75,6 +75,8 @@ function updateVisuals()
         {
             //startBarChart(data, 'chart-placeholder-1');
             startLineChart(data, 'chart-placeholder');
+
+            setDataSetDescription(dataset);
         },
         error: function (xhr, textStatus, errorThrown)
         {
@@ -85,4 +87,17 @@ function updateVisuals()
             alert('Failed! ' + textStatus + ' ' + errorThrown);
         }
     });    
+}
+
+function setDataSetDescription(dataset)
+{
+    var description = '';
+    switch(dataset)
+    {
+        case 'overall-sentiment-by-user':
+            description = 'The Overall Sentiment by User graph shows the total number of positive (and negative) scored tweets posted by each named person over a period of time.';
+        break;
+    }
+
+    $('#dataset-description').text(description);
 }

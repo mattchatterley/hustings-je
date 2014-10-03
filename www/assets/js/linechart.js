@@ -29,16 +29,25 @@ function startLineChart(rawData, placeholderId)
         var dataset = {};
         dataset.label = "@" + rawData[i].ScreenName + ( rawData[0].Multidimensional ? " - positive" : "");
 
-        //var rnd = 75 + parseInt(Math.random() * (255-75), 10);
-        var rnd=current;
-        current += perStep;
-//console.debug(rnd);
+        //var seedColour = 65 + parseInt(Math.random() * 120);        
+        var rSeed = 0 + Math.floor(Math.random() * 200);        
+        var gSeed = 0 + Math.floor(Math.random() * 200);        
+        var bSeed = 0 + Math.floor(Math.random() * 200);        
+
+        var rLight = rSeed + 30;
+        var rDark = rSeed - 30;
+        var gLight = gSeed + 30;
+        var gDark = gSeed - 30;
+        var bLight = bSeed + 30;
+        var bDark = bSeed - 30;
+
         dataset.fillColor = "rgba(0,0,0,0)";
-        dataset.strokeColor = "rgba("+rnd+",0,0,0.8)";
-        pointColor = "rgba("+rnd+",220,220,1)",
+        dataset.strokeColor = "rgba("+rLight+","+gLight+","+bLight+",0.8)";
+        pointColor = "rgba("+rLight+","+gLight+","+bLight+",1)",
         pointStrokeColor = "#fff",
+        pointColor = "rgba("+rLight+","+gLight+","+bLight+",1)",
         pointHighlightFill = "#fff",
-        pointHighlightStroke = "rgba("+rnd+",220,220,1)",
+        pointHighlightStroke = "rgba("+rLight+","+gLight+","+bLight+",1)",
 
         dataset.data = rawData[i].Values.map(getYCoordinate);
         //console.debug(dataset.data);
@@ -49,16 +58,14 @@ function startLineChart(rawData, placeholderId)
         {
             //console.debug("multi - adding 2nd set");
             var dataset = {};
-        dataset.label = "@" + rawData[i].ScreenName + ( rawData[0].Multidimensional ? " - negative" : "");
-
-            var rnd = 75 + parseInt(Math.random() * (255-75), 10);
+            dataset.label = "@" + rawData[i].ScreenName + ( rawData[0].Multidimensional ? " - negative" : "");
 
             dataset.fillColor = "rgba(0,0,0,0)";
-            dataset.strokeColor = "rgba(0,0,"+rnd+",0.8)";
-            pointColor = "rgba(220,220,"+rnd+",1)",
+            dataset.strokeColor = "rgba("+rDark+","+gDark+","+bDark+",0.8)";
+            pointColor = "rgba("+rDark+","+gDark+","+bDark+",1)",
             pointStrokeColor = "#fff",
             pointHighlightFill = "#fff",
-            pointHighlightStroke = "rgba(220,220,"+rnd+",1)",
+            pointHighlightStroke = "rgba("+rDark+","+gDark+","+bDark+",1)",
 
             dataset.data = rawData[i].Values.map(getYCoordinate2);
             //console.debug(dataset.data);

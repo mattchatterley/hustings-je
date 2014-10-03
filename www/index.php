@@ -182,7 +182,7 @@
                 <legend>Ready?</legend>
                 <button onclick="updateVisuals();">Go!</button>
             </fieldset>
-            <div id="d3-placeholder"></div>
+            <p id="dataset-description"></p>
             <canvas id="chart-placeholder" width="800" height="500"></canvas>
             <div id="chart-placeholder-legend"></div>
         <?php
