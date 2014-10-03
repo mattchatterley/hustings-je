@@ -2,6 +2,8 @@
 $(document).ready(function()
 {
     $('.datepicker').datepicker();
+
+    updateVisuals();
 });
 
 function updateVisuals()
@@ -71,8 +73,8 @@ function updateVisuals()
         },
         success: function(data, textStatus, xhr)
         {
-            startBarChart(data, 'chart-placeholder-1');
-            startLineChart(data, 'chart-placeholder-2');
+            //startBarChart(data, 'chart-placeholder-1');
+            startLineChart(data, 'chart-placeholder');
         },
         error: function (xhr, textStatus, errorThrown)
         {

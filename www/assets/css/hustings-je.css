@@ -12,3 +12,24 @@ th
 {
     font-weight: bold;
 }
+
+legend
+{
+	color: #ffffff;
+}
+
+input,select,button
+{
+	color: #000000;
+}
+
+h2
+{
+	font-size: 2rem;
+}
+
+#chart-placeholder
+{
+	margin-top: 10px;
+	background-color: #ffffff;
+}

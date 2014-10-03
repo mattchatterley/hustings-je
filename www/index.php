@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+
     include_once('inc/database.php');
     include_once('inc/User.php');
 
@@ -47,7 +48,6 @@
 
     </head>
     <body>
-
        <div class="site-wrapper">
             <div class="site-wrapper-inner">
             <div class="cover-container">
@@ -58,61 +58,70 @@
                 </div>
 
             <div>
-        <h2>Table of data (latest 10 tweets)</h2>
+            <div>
+                Put a welcome message here.
+                <br><br>
+                Give a brief explanation of what stuff does and that it'll be added to
+            </div>
         <?php
-            $result = $database->Query("SELECT * from ScoredTweets ORDER BY Timestamp DESC LIMIT 10");
-
-            ?>
-            <h4><?php echo($result->num_rows); ?> rows found...</h4>
-            <?php
-
-            $fields = $result->fetch_fields();
-
-            ?>
-            <table>
-                <tr>
-            <?php
-            foreach($fields as $field)
+            if(!empty($_GET["debug"]))
             {
                 ?>
-                    <th>
-                        <?php echo($field->name); ?>
-                    </th>
+                <h2>Table of data (latest 10 tweets)</h2>
                 <?php
-            }
-            ?>
-                </tr>
-            <?php
+                    $result = $database->Query("SELECT * from ScoredTweets ORDER BY Timestamp DESC LIMIT 10");
 
-            while($row = $result->fetch_assoc())
-            {
-                ?>
-                <tr>
-                <?php
-                foreach($fields as $field)
-                {
                     ?>
-                        <td>
-                            <?php echo(htmlspecialchars($row[$field->name])); ?>
-                        </td>
+                    <h4><?php echo($result->num_rows); ?> rows found...</h4>
                     <?php
-                }
-                ?>
-                </tr>
-                <?php
-            }
-        ?>
-            </table>
 
+                    $fields = $result->fetch_fields();
+
+                    ?>
+                    <table>
+                        <tr>
+                    <?php
+                    foreach($fields as $field)
+                    {
+                        ?>
+                            <th>
+                                <?php echo($field->name); ?>
+                            </th>
+                        <?php
+                    }
+                    ?>
+                        </tr>
+                    <?php
+
+                    while($row = $result->fetch_assoc())
+                    {
+                        ?>
+                        <tr>
+                        <?php
+                        foreach($fields as $field)
+                        {
+                            ?>
+                                <td>
+                                    <?php echo(htmlspecialchars($row[$field->name])); ?>
+                                </td>
+                            <?php
+                        }
+                        ?>
+                        </tr>
+                        <?php
+                    }
+                ?>
+                    </table>
             <?php
+            }
                 // prepare data for parameters
-                $users = User::All();
+                //$users = User::All();
             ?>
             <h2>Configurable graph(s)</h2>
             <fieldset>
                 <legend>Participants</legend>
-                <input id="participant-everyone" class="participant-group" type="checkbox" value="all"/>Everyone
-                <input id="participant-most-frequent" class="participant-group" type="checkbox" value="most-frequent" checked/>Most Frequent
+                <!--<input id="participant-everyone" class="participant-group" type="checkbox" value="all"/>Everyone-->
+                <input id="participant-most-frequent" class="participant-group" type="checkbox" value="most-frequent" checked/>Most Frequent Tweeters
                 <!--<input id="participant-most-mentioned" class="participant-group" type="checkbox" value="least" />Most Mentioned-->
                 <!-- TODO: Offer specific user choice
                 <br />
@@ -137,14 +146,14 @@
                     <!--<option value="month">Month</option>-->
                     <option value="week">Week</option>
                     <option value="day" selected>Day</option>
-                    <option value="hour">Hour</option>
+                    <<option value="hour">Hour</option>
                 </select>
             </fieldset>
             <fieldset>
                 <legend>Data Set</legend>
                 <select id="dataset">
                     <option value="overall-sentiment-by-user">Overall Sentiment by User</option>
-                    <option value="sentiment-over-time">Sentiment over Time</option>
+                    <!--<option value="sentiment-over-time">Sentiment over Time</option>-->
                 </select>
             </fieldset>
 <!--            <fieldset>
@@ -158,8 +167,7 @@
                 <button onclick="updateVisuals();">Go!</button>
             </fieldset>
             <div id="d3-placeholder"></div>
-            <canvas id="chart-placeholder-1" width="800" height="500"></canvas>
-            <canvas id="chart-placeholder-2" width="800" height="500"></canvas>
+            <canvas id="chart-placeholder" width="800" height="500"></canvas>
         <?php
 
             // TODO: UI - Validation
