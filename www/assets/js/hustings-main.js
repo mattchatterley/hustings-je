@@ -76,7 +76,7 @@ function updateVisuals()
             //startBarChart(data, 'chart-placeholder-1');
             startLineChart(data, 'chart-placeholder');
 
-            setDataSetDescription(dataset);
+            setDataSetDescription(dataSet);
         },
         error: function (xhr, textStatus, errorThrown)
         {
@@ -89,10 +89,10 @@ function updateVisuals()
     });    
 }
 
-function setDataSetDescription(dataset)
+function setDataSetDescription(dataSet)
 {
     var description = '';
-    switch(dataset)
+    switch(dataSet)
     {
         case 'overall-sentiment-by-user':
             description = 'The Overall Sentiment by User graph shows the total number of positive (and negative) scored tweets posted by each named person over a period of time.';
