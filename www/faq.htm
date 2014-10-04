@@ -46,27 +46,47 @@
             <div class="cover-container">
                 <div class="masthead clearfix">
                         <div class="inner">
+                            <ul class="nav masthead-nav">
+                                    <li><h3><a href="index.php">back</a></h3></li>
+                                </ul>
                                 <h1 class="masthead-brand">Hustings.je</h1>
                         </div>
                 </div>
+            </div>
 
-            <div  style="width:90%; margin:0 auto 50px;">
-
-				<h3>FAQ</h3>
-        <hr>
+            <div class="cover-container-light">
+            <div class="row">
+                <div class="col-xs-12">
+				<h3>Frequently Asked Questions</h3>
+            </div>
+        <div class="col-xs-12">
 				<h4 style="font-weight:bold;">How does it work? </h4>
         <p>We have a Hadoop cluster in AWS that is collecting and analysing the tweets, then pushing them out to the website.<br/> All the source code is here [link] if you want to see for yourself.</p>
-        <hr>
+        </div>
+        <div class="col-xs-12">
 				<h4 style="font-weight:bold;">How do you analyse sentiment?</h4>
         <p>There are two methods: simple (or “bag of words”) and NLP.<br/> The simple methods score individual words as either positive, neutral or negative, and the score for a tweet is simply added to give an overall score. NLP stands for Natural Language Processing. We use the Stanford University NLP Group’s CoreNLP suite of tools (http://nlp.stanford.edu/software/corenlp.shtml). This uses a neural network trained on movie reviews to generate the sentiment scores. This is currently the most accurate machine-learning algorithm for sentiment scoring.</p>
-        <hr>
+        </div>
+        <div class="col-xs-12">
 				<h4 style="font-weight:bold;">I've found one you got wrong??!?!</h4>
         <p>Yeah, that’ll happen.<br/>Neither simple nor NLP scoring is a 100% accurate process. Stanford have claimed an 85% accuracy for their sentiment analyser. We will be testing the accuracy of it in this context.</p>
-        <hr>
-				<h4 style="font-weight:bold;">You’ve made it biased against/for XYZ haven’t you?</h4>
-        <p>No, we really haven’t.<br/> We’re good, but not good enough to introduce subtle-yet-influential-but-impossible-to-find biases. All the source code is here [link] so you can verify it all for yourself. Let us know if you want a hand.</p>
-        <hr>
-</div>
+        </div>
+                <div class="col-xs-12">
+				    <h4 style="font-weight:bold;">You’ve made it biased against/for XYZ haven’t you?</h4>
+                    <p>No, we really haven’t.<br/> We’re good, but not good enough to introduce subtle-yet-influential-but-impossible-to-find biases. All the source code is here [link] so you can verify it all for yourself. Let us know if you want a hand.</p>
+                </div>
+                <div class="col-xs-12">
+                    <h4 style="font-weight:bold;">This is a <a href="http://www.techtribes.je" target="_blank">TechTribes.je</a> production, featuring:</h4>
+                    
+                    <ul style="list-style:none; padding:0;">
+                        <li>Data Monkey: <a href="http://twitter.com/charles_jsy" target="_blank">Charles Robertson</a></li>
+                        <li>Web Monkey: <a href="http://twitter.com/mattchedit" target="_blank">Matt Chatterley </a></li>
+                        <li>Graphics Monkey: <a href="http://twitter.com/bearpig" target="_blank">Robbie Andrews</a></li>
+                    </ul>
+
+                    </div>
+            </div>
+            </div>
             <div class="mastfoot">
                 <div class="inner">
                     <div class="pull-right">
