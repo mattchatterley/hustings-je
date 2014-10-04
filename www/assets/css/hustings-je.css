@@ -15,7 +15,11 @@ th
 
 legend
 {
-	color: #ffffff;
+	color: #000;
+	font-size:16px;
+	border-bottom:none;
+	margin-bottom:5px;
+	font-weight:bold;
 }
 
 input,select,button
