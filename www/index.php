@@ -54,31 +54,32 @@
             <div class="cover-container">
                 <div class="masthead clearfix">
                         <div class="inner">
+                                <ul class="nav masthead-nav">
+                                    <li><h3><a href="faq.htm">FAQ</a></h3></li>
+                                </ul>
                                 <h1 class="masthead-brand">Hustings.je</h1>
+                                
                         </div>
                 </div>
+            </div>
+            <div class="cover-container-light">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Hustings.je is an experiment in applying sentiment-analysis to social media during the Jersey 2014 elections.<br/>
+                    What can we learn about candidates from their tweets, and tweets mentioning them?</h2>
+                    
+                
+                    <p>This site is under continual development and if there is something in particular you'd like to see, please let us know.</p>
+                </div>
 
-            <div>
-            <p>
-                Hustings.je is an experiment in applying sentiment-analysis to social media during the Jersey 2014 elections. What can we learn about candidates from their tweets, and tweets mentioning them?
-                <br/><br/>
-                It is a <a href="http://www.techtribes.je" target="_blank">TechTribes.je</a> production, featuring:
-            </p>
-            <ul>
-                <li>Data Monkey: Charles Robertson (<a href="http://twitter.com/charles_jsy" target="_blank">@charles_jsy</a>)</li>
-                <li>Web Monkey: Matt Chatterley (<a href="http://twitter.com/mattchedit" target="_blank">@mattchedit</a>)</li>
-                <li>Graphics Monkey: Robbie Andrews (<a href="http://twitter.com/bearpig" target="_blank">@bearpig</a>)</li>
-            </ul>
-            </p>
-            <p>
-                This site is under continual development and if there is something in particular you'd like to see, please let us know.
-            </p>
-            <p>
-                Questions? <a href="faq.htm">Click here!</a>
-            </p>
-            <div>
-                Key stats here - # of tweets, etc
-            </div>            
+            </div>
+
+           <div class="row" style="background:#f8f5f8;">
+                <div class="col-sm-12" style="text-align:center;">
+                    <h3>Key stats here - # of tweets, etc</h3>
+                </div>
+            </div>
+
         <?php
             if(!empty($_GET["debug"]))
             {
@@ -133,7 +134,9 @@
                 // prepare data for parameters
                 //$users = User::All();
             ?>
-            <h2>Configurable graph(s)</h2>
+
+    <div class="row" style="margin-top:20px;background:#f8f5f8;">
+        <div class="col-md-3">
             <fieldset>
                 <legend>Participants</legend>
                 <!--<input id="participant-everyone" class="participant-group" type="checkbox" value="all"/>Everyone-->
@@ -150,41 +153,59 @@
                     }
                     ?>-->
             </fieldset>
+        </div>
+        <div class="col-md-6">
             <fieldset>
                 <legend>Time</legend>
                 <input id="time-all" name="time-type" type="radio" value="all"/>All
                 <input id="time-range" name="time-type" type="radio" value="from" checked />Date Range
                 <input id="date-from" type="text" class="datepicker" value="<?php echo(date("d/m/Y", time() - 60*60*24*7));?>"/> to <input id="date-to" type="text" class="datepicker" value="<?php echo(date("d/m/Y", time())); ?>"/>
             </fieldset>
+        </div>
+        <div class="col-md-3">
             <fieldset>
                 <legend>Resolution</legend>
-                <select id="time-slot">
+                <select id="time-slot" class="form-control">
                     <!--<option value="month">Month</option>-->
                     <option value="week">Week</option>
                     <option value="day" selected>Day</option>
                     <option value="hour">Hour</option>
                 </select>
             </fieldset>
-            <fieldset>
-                <legend>Data Set</legend>
-                <select id="dataset">
-                    <option value="overall-sentiment-by-user">Overall Sentiment by User</option>
-                    <!--<option value="sentiment-over-time">Sentiment over Time</option>-->
-                </select>
-            </fieldset>
+        </div>
+    </div>
+    <div class="row"  style="background:#f8f5f8;">
+        <div class="col-md-3">
 <!--            <fieldset>
                 <legend>Type of Graph</legend>
                 <input id="graph-type" name="graph-type" type="radio" value="streamgraph" checked/>Line
                 <input id="graph-type" name="graph-type" type="radio" value="pie" />Pie
                 <input id="graph-type" name="graph-type" type="radio" value="bars" />Bars
             </fieldset>-->
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <legend>Data Set</legend>
+                <select id="dataset" class="form-control">
+                    <option value="overall-sentiment-by-user">Overall Sentiment by User</option>
+                    <!--<option value="sentiment-over-time">Sentiment over Time</option>-->
+                </select>
+            </fieldset>
+        </div>
+        <div class="col-md-3">
             <fieldset>
                 <legend>Ready?</legend>
-                <button onclick="updateVisuals();">Go!</button>
+                <button onclick="updateVisuals();" class="btn btn-primary form-control">Show Graph</button>
             </fieldset>
-            <p id="dataset-description"></p>
-            <canvas id="chart-placeholder" width="800" height="500"></canvas>
-            <div id="chart-placeholder-legend"></div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-xs-12">
+                <p id="dataset-description"></p>
+            </div>
+            <canvas id="chart-placeholder" class="col-md-8"></canvas>
+            <div id="chart-placeholder-legend" class="col-md-4"></div>
+    </div>
         <?php
 
         // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
@@ -222,7 +243,19 @@
              *
              */
         ?>
+<div class="row">
+                <div class="col-md-12">
+                    <h4>This is a <a href="http://www.techtribes.je" target="_blank">TechTribes.je</a> production, featuring:</h4>
+                    <ul style="list-style:none; padding:0;">
+                        <li>Data Monkey: <a href="http://twitter.com/charles_jsy" target="_blank">Charles Robertson</a></li>
+                        <li>Web Monkey: <a href="http://twitter.com/mattchedit" target="_blank">Matt Chatterley </a></li>
+                        <li>Graphics Monkey: <a href="http://twitter.com/bearpig" target="_blank">Robbie Andrews</a></li>
+                    </ul>
+                </div>
+            </div>
+
 </div>
+            
             <div class="mastfoot">
                 <div class="inner">
                     <div class="pull-right">
