@@ -7,6 +7,8 @@ DROP VIEW l3;
 DROP VIEW tweets_sentiment;
 DROP VIEW tweets_clean;
 
+CREATE FUNCTION GetNlpSentiment AS 'je.hustings.hive.nlp.SentimentAnalyser';
+
 -- Clean up tweets
 CREATE VIEW tweets_simple AS
 SELECT
@@ -40,3 +42,8 @@ create view l3 as select
     when sum( polarity ) < 0 then 'negative'  
     else 'neutral' end as sentiment 
  from l3 group by id;
+
+ create view nlp_score as select
+	id,
+	GetNlpSentiment(text) as NlpSentiment
+from tweets_simple;

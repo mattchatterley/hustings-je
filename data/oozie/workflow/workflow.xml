@@ -1,5 +1,26 @@
 <workflow-app name="HustingsJe-v1" xmlns="uri:oozie:workflow:0.4">
-	<start to="StageData"/>
+	<start to="countFiles"/>
+	
+	<action name="countFiles">
+		<shell xmlns="uri:oozie:shell-action:0.1"> 
+			<job-tracker>${jobTracker}</job-tracker>
+			<name-node>${nameNode}</name-node>
+			<exec>${fileCountShellScriptName}</exec>
+			<file>${fileCountShellScriptPath}#${fileCountShellScriptName}</file>
+			<capture-output/>
+		</shell>
+		
+		<ok to="fileCountDecision"/>
+		<error to="fail"/>
+	</action>
+	
+	<decision name="fileCountDecision">
+		<switch>
+			<case to="StageData">${wf:actionData('countFiles')['NumberOfFiles'] gt 0}</case>
+			<default to="end"/>
+		</switch>
+	</decision>
+	
 	<action name="StageData">
 		<shell xmlns="uri:oozie:shell-action:0.1">
             <job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
@@ -56,7 +77,7 @@
 		<sqoop xmlns="uri:oozie:sqoop-action:0.2">
 			<job-tracker>ip-172-31-35-147.eu-west-1.compute.internal:8050</job-tracker>
 			<name-node>hdfs://ip-172-31-33-135.eu-west-1.compute.internal:8020</name-node>
-			<command>export --connect jdbc:mysql://web02.mattchedit.com:3306/hustings_je --username hustings-je --password Hust1ngs! --table ScoredTweets --export-dir hdfs:///apps/hive/warehouse/tweetsbi --input-fields-terminated-by \t</command>
+			<command>export --connect jdbc:mysql:/[server]:3306/[schema] --username [username] --password [password] --table ScoredTweets --export-dir hdfs:///apps/hive/warehouse/tweetsbi --input-fields-terminated-by \t</command>
 		</sqoop>
 		
 		<ok to="Cleanup"/>
@@ -78,9 +99,19 @@
             <argument>/user/root/not_processed</argument>
 		</shell>
 		
-		<ok to="fail"/>
+		<ok to="sendEmail"/>
 		<error to="fail"/>
 	</action>
+	
+	 <action name="sendEmail">
+		<email xmlns="uri:oozie:email-action:0.1">
+		<to>charles.robertson@gmail.com</to>
+		<subject>Workflow failed: ${wf:id()}</subject>
+		<body>Error message: ${wf:errorMessage(wf:lastErrorNode())}</body>
+		</email>
+		<ok to="end"/>
+		<error to="fail"/>
+</action>
 	
 	<action name="Cleanup">
 		<shell xmlns="uri:oozie:shell-action:0.1">

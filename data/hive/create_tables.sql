@@ -31,7 +31,9 @@ CREATE EXTERNAL TABLE tweetsbi (
 	sentiment string,
 	sentimentscore int,
 	text string,
-	ts timestamp
+	ts timestamp,
+	nlpsentiment string,
+	nlpsentimentscore int
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE;

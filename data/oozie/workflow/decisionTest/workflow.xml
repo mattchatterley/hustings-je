@@ -1,0 +1,38 @@
+<workflow-app name="decisionText" xmlns="uri:oozie:workflow:0.4">
+	<start to="shellAction"/>
+	<action name="shellAction">
+		<shell xmlns="uri:oozie:shell-action:0.1"> 
+			<job-tracker>${jobTracker}</job-tracker>
+			<name-node>${nameNode}</name-node>
+			<exec>${fileCountShellScriptName}</exec>
+			 <file>${fileCountShellScriptPath}#${fileCountShellScriptName}</file>
+			<capture-output/>
+		</shell>
+		
+		<ok to="decisionTest"/>
+		<error to="fail"/>
+	</action>
+	
+	<decision name="decisionTest">
+		<switch>
+			<case to="end">${wf:actionData('shellAction')['NumberOfFiles'] gt 0}</case>
+			<default to="sendEmail"/>
+		</switch>
+	</decision>
+	
+	 <action name="sendEmail">
+		<email xmlns="uri:oozie:email-action:0.1">
+		<to>charles.robertson@gmail.com</to>
+		<subject>Output of workflow ${wf:id()}</subject>
+		<body>Results from line count: ${wf:actionData('shellAction')['NumberOfFiles']}. actionData: ${wf:actionData('shellAction')}</body>
+		</email>
+		<ok to="end"/>
+		<error to="fail"/>
+</action>
+	
+    <kill name="fail">
+        <message>Script failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    
+	<end name="end"/>
+</workflow-app>
