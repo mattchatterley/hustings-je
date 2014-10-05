@@ -10,13 +10,13 @@ include_once('../inc/Engine.php');
 
 echo("Starting...");
 
-// get participants
-$users = User::MostFrequent();
-
 $from = date('Y-m-d H:i:s', 0);
 $to = date('Y-m-d H:i:s', time());
 $timeslot = 'day';
 $dataset = 'overall-sentiment-by-user';
+
+// get participants
+$users = User::MostFrequent(5, $from, $to);
 
 echo("Calling Engine...");
 

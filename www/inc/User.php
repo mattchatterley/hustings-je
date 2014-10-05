@@ -38,16 +38,29 @@ class User
         return $users;
     }
     
-    static function MostFrequent($limit)
+    static function MostFrequent($numberOfUsers, $startDate, $endDate)
     {
         $db = new Database();
 
-        if(empty($limit))
+        if(!empty($startDate))
         {
-            $limit = "10";
+            $where =  "WHERE Timestamp BETWEEN '$startDate' AND '$endDate'";
+        }
+        else
+        {
+            $where = "";
         }
 
-        $results = $db->Query("SELECT Name, ScreenName FROM ScoredTweets GROUP BY Name, ScreenName ORDER BY COUNT(TweetId) DESC LIMIT $limit");
+        if($numberOfUsers > 0)
+        {
+            $limit = "LIMIT $numberOfUsers";
+        }
+        else
+        {
+            $limit = "";
+        }
+
+        $results = $db->Query("SELECT Name, ScreenName FROM ScoredTweets $where GROUP BY Name, ScreenName ORDER BY COUNT(TweetId) DESC $limit");
         
         $users = Array();
 

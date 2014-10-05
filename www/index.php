@@ -140,7 +140,7 @@
             <fieldset>
                 <legend>Participants</legend>
                 <!--<input id="participant-everyone" class="participant-group" type="checkbox" value="all"/>Everyone-->
-                <input id="participant-most-frequent" class="participant-group" type="checkbox" value="most-frequent" checked/>Most Frequent Tweeters
+                <input id="participant-most-frequent" class="participant-group" type="checkbox" value="most-frequent" checked onchange="updateParameterFields();"/>Most Frequent Tweeters (for time selected)
                 <!--<input id="participant-most-mentioned" class="participant-group" type="checkbox" value="least" />Most Mentioned-->
                 <!-- TODO: Offer specific user choice
                 <br />
@@ -176,6 +176,10 @@
     </div>
     <div class="row"  style="background:#f8f5f8;">
         <div class="col-md-3">
+            <fieldset id="number-of-users">
+                <legend>Number of Users</legend>
+                <input id="number-users" name="number-users" value="3">Number of Tweeters
+            </fieldset>
 <!--            <fieldset>
                 <legend>Type of Graph</legend>
                 <input id="graph-type" name="graph-type" type="radio" value="streamgraph" checked/>Line
@@ -208,7 +212,11 @@
     </div>
         <?php
 
-        // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
+            // TODO: Allow user to set number of most active tweeters
+            // TODO: Make most active tweeters obey date range
+            // TODO: At the moment it's not using mentions, only the 'from' data and just shows the top 3, so I think first priority is to be able to use mentions (Or not) optionally - and also pick your users?
+
+            // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
 
             // TODO: UI - Validation
 

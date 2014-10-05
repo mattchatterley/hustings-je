@@ -3,8 +3,21 @@ $(document).ready(function()
 {
     $('.datepicker').datepicker();
 
+    updateParameterFields();
     updateVisuals();
-});
+ });
+
+function updateParameterFields()
+{
+    // set defaults
+    $('#number-of-users').hide();
+
+    if($('#participant-most-frequent').is(':checked'))
+    {
+        $('#number-of-users').show();            
+    }
+
+}
 
 function updateVisuals()
 {    
@@ -53,6 +66,8 @@ function updateVisuals()
     
     var dataSet = $('#dataset').val();
     //alert(dataSet);
+
+    var numberUsers = $('#number-users').val();
         
     // get the data points from the database
     // e.g. streamgraph expects a set of x-y pairs for each line
@@ -69,10 +84,12 @@ function updateVisuals()
             from: dateFrom,
             to: dateTo,
             timeslots: timeSlot,
-            dataset: dataSet
+            dataset: dataSet,
+            userlimit: numberUsers
         },
         success: function(data, textStatus, xhr)
         {
+            console.debug(data);
             //startBarChart(data, 'chart-placeholder-1');
             startLineChart(data, 'chart-placeholder');
 
