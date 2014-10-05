@@ -83,7 +83,7 @@
                 <?php
                     $stats = new Stats();
                 ?>
-                    <h3>So far hustings.je has analysed <?php echo($stats->TotalTweets); ?> tweets by <?php echo($stats->TotalParticipants); ?> people.</h3>
+                    <h3>So far hustings.je has analysed <span style="color:black; font-size:26px"><?php echo($stats->TotalTweets); ?></span> tweets by <span style="color:black; font-size:26px"><?php echo($stats->TotalParticipants); ?></span> people.</h3>
                 </div>
             </div>
 
