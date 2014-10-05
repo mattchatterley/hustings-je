@@ -30,6 +30,13 @@ function updateVisuals()
     {
         participantGroup = '';
     }
+
+    if(!participantGroup)
+    {
+        alert('Please select a group of users.');
+        return;
+    }
+
     //alert(participantGroup);
     
     /*
