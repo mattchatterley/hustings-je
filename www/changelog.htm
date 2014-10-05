@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
@@ -47,37 +46,29 @@
             </div>
 
             <div class="cover-container-light">
-            <div class="row">
-                <div class="col-xs-12">
-				<h3>Frequently Asked Questions</h3>
-            </div>
-        <div class="col-xs-12">
-				<h4 style="font-weight:bold;">How does it work? </h4>
-        <p>We have a Hadoop cluster in AWS that is collecting and analysing the tweets, then pushing them out to the website.<br/> All the source code is <a href="https://github.com/mattchatterley/hustings-je" target="_blank">here</a> if you want to see for yourself.</p>
-        </div>
-        <div class="col-xs-12">
-				<h4 style="font-weight:bold;">How do you analyse sentiment?</h4>
-        <p>There are two methods: simple (or “bag of words”) and NLP.<br/> The simple methods score individual words as either positive, neutral or negative, and the score for a tweet is simply added to give an overall score. NLP stands for Natural Language Processing. We use the Stanford University NLP Group’s CoreNLP suite of tools (http://nlp.stanford.edu/software/corenlp.shtml). This uses a neural network trained on movie reviews to generate the sentiment scores. This is currently the most accurate machine-learning algorithm for sentiment scoring.</p>
-        </div>
-        <div class="col-xs-12">
-				<h4 style="font-weight:bold;">I've found one you got wrong??!?!</h4>
-        <p>Yeah, that’ll happen.<br/>Neither simple nor NLP scoring is a 100% accurate process. Stanford have claimed an 85% accuracy for their sentiment analyser. We will be testing the accuracy of it in this context.</p>
-        </div>
-                <div class="col-xs-12">
-				    <h4 style="font-weight:bold;">You’ve made it biased against/for XYZ haven’t you?</h4>
-                    <p>No, we really haven’t.<br/> We’re good, but not good enough to introduce subtle-yet-influential-but-impossible-to-find biases. All the source code is <a href="https://github.com/mattchatterley/hustings-je" target="_blank">here</a> so you can verify it all for yourself. Let us know if you want a hand.</p>
+                <div class="row">
+                    <div class="col-xs-12">
+    				<h3>Things to do &amp; Recent changes</h3>
                 </div>
-                <div class="col-xs-12">
-                    <h4 style="font-weight:bold;">This is a <a href="http://www.techtribes.je" target="_blank">TechTribes.je</a> production, featuring:</h4>
-                    
-                    <ul style="list-style:none; padding:0;">
-                        <li>Data Monkey: <a href="http://twitter.com/charles_jsy" target="_blank">Charles Robertson</a></li>
-                        <li>Web Monkey: <a href="http://twitter.com/mattchedit" target="_blank">Matt Chatterley </a></li>
-                        <li>Graphics Monkey: <a href="http://twitter.com/bearpig" target="_blank">Robbie Andrews</a></li>
-                    </ul>
+        <div class="col-xs-12">
+				<h4 style="font-weight:bold;">TODO</h4>
+                <ul>
+                    <li>Offer a choice between 'tweets by' and 'tweets mentioning'</li>
+                    <li>Allow user to pick specific users to view</li>
+                    <li>Add in 'week' as a grouping in addition to day</li>
+                    <li>Add in drill down or data view to further analyse how/why a line has been plotted</li>
+                </ul>
+                <p>
 
-                    </div>
-            </div>
+                </p>
+        </div>
+        <div class="col-xs-12">
+				<h4 style="font-weight:bold;">Recent Changes</h4>
+                <h5>5/10/2014</h5>
+                <p>
+                    Site made live with minimum functionality.
+                </p>                    
+        </div>
             </div>
             <div class="mastfoot">
                 <div class="inner">

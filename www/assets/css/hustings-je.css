@@ -65,3 +65,21 @@ input[type="radio"], input[type="checkbox"]
 {
 	margin: 4px 5px 0 0
 }
+
+h3 span
+{
+	color:black; 
+	font-size:26px;
+}
+
+.masthead-nav li
+{
+	padding-left: 20px;
+}
+
+h5
+{
+	font-size: 1.5rem;
+	font-style: italic;
+	text-decoration: underline;
+}

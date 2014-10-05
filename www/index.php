@@ -60,6 +60,7 @@
                         <div class="inner">
                                 <ul class="nav masthead-nav">
                                     <li><h3><a href="faq.htm">FAQ</a></h3></li>
+                                    <li><h3><a href="changelog.htm">TODO / Changed</a></h3></li>
                                 </ul>
                                 <h1 class="masthead-brand">Hustings.je</h1>
                                 
@@ -83,7 +84,9 @@
                 <?php
                     $stats = new Stats();
                 ?>
-                    <h3>So far hustings.je has analysed <span style="color:black; font-size:26px"><?php echo($stats->TotalTweets); ?></span> tweets by <span style="color:black; font-size:26px"><?php echo($stats->TotalParticipants); ?></span> people.</h3>
+                    <h3>So far hustings.je has analysed <span><?php echo($stats->TotalTweets); ?></span> tweets by <span><?php echo($stats->TotalParticipants); ?></span> people.</h3>
+                    <h3>The 'simple' method shows <span><?php echo($stats->SimplePositive); ?>%</span> of tweets to be positive, <span><?php echo($stats->SimpleNeutral); ?>%</span> neutral and <span><?php echo($stats->SimpleNegative); ?>%</span> negative.</h3>
+                    <h3>The 'NLP' method shows <span><?php echo($stats->NlpPositive); ?>%</span> of tweets to be positive, <span><?php echo($stats->NlpNeutral); ?>%</span> neutral and <span><?php echo($stats->NlpNegative); ?>%</span> negative.</h3>
                 </div>
             </div>
 
@@ -225,6 +228,9 @@
             // TODO: finish fixing 'week' and re-instate
             // TODO: Can we re-instate hourly by limiting dates to a single day?
 
+            // TODO: One for the list, but lower priority than mentions or selecting tweeters: can we make it so you can drill down to the tweets that make up a particular data point?
+
+
             // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
 
             // TODO: UI - Validation
@@ -290,5 +296,15 @@
         </div>
     </div>
 </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54797669-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     </body>
 </html>
