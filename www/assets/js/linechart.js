@@ -87,6 +87,10 @@ function startLineChart(rawData, placeholderId)
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\">&nbsp;</span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
     };
 
+    $('#chart-container').empty();
+    $('#chart-container').html('<canvas id="chart-placeholder" class="col-md-8"></canvas>');
+
+
     var ctx = document.getElementById(placeholderId).getContext("2d");
   //  console.debug(ctx);
     var chart = new Chart(ctx).Line(data, options);

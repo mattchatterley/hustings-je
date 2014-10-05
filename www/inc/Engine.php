@@ -48,6 +48,10 @@ class Engine
             case "month":
                 $date = "DATE_FORMAT(Timestamp, '%Y-%m-01')";
                 break;
+            case "week":
+                $date = "WEEK(Timestamp)";
+                break;
+            break;
             // TODO: Add support for week here
             case "day":
                 $date = "DATE_FORMAT(Timestamp, '%Y-%m-%d')";
@@ -101,7 +105,11 @@ class Engine
         $timeAxisPoints = 1;
 
         // total seconds in the difference, divided by size of the timeslot in seconds
-        if($this->TimeSlot != 'month')
+        if($this->TimeSlot == 'week')
+        {
+            $timeAxisPoints = $timeAxis["max_time"] - $timeAxis["min_time"];
+        }
+        elseif($this->TimeSlot != 'month')
         {
             $timeAxisPoints =  $timeAxisElapsed > 0 ? $timeAxisElapsed / $timeSlotLengthSeconds : 1;
         }
@@ -149,7 +157,11 @@ class Engine
                     //$pointInTime = date_diff(date_create($timeAxis["min_time"]), date_create($row["Timestamp"]));
                     $pointInTime = strtotime($row["Timestamp"]) - strtotime($timeAxis["min_time"]);
 
-                    if($this->TimeSlot != 'month')
+                    if($this->TimeSlot == 'week')
+                    {
+                        $pointInPoints = $pointInTime;
+                    }
+                    elseif($this->TimeSlot != 'month')
                     {
                         $pointInPoints = $pointInTime > 0 ? $pointInTime / $timeSlotLengthSeconds : 0;
                     }

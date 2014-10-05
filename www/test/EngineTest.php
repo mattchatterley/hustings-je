@@ -12,7 +12,7 @@ echo("Starting...");
 
 $from = date('Y-m-d H:i:s', 0);
 $to = date('Y-m-d H:i:s', time());
-$timeslot = 'day';
+$timeslot = 'week';
 $dataset = 'overall-sentiment-by-user';
 
 // get participants

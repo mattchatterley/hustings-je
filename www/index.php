@@ -174,9 +174,9 @@
                 <legend>Resolution</legend>
                 <select id="time-slot" class="form-control">
                     <!--<option value="month">Month</option>-->
-                    <option value="week">Week</option>
+                    <!--<option value="week">Week</option>-->
                     <option value="day" selected>Day</option>
-                    <option value="hour">Hour</option>
+                    <!--<option value="hour">Hour</option>-->
                 </select>
             </fieldset>
         </div>
@@ -214,13 +214,16 @@
             <div class="col-xs-12">
                 <p id="dataset-description"></p>
             </div>
-            <canvas id="chart-placeholder" class="col-md-8"></canvas>
+            <div id="chart-container"></div>
             <div id="chart-placeholder-legend" class="col-md-4"></div>
     </div>
         <?php
 
             // TODO: Update mentions in real time (script from CR to go into crontab)
             // TODO: At the moment it's not using mentions, only the 'from' data and just shows the top 3, so I think first priority is to be able to use mentions (Or not) optionally - and also pick your users?
+
+            // TODO: finish fixing 'week' and re-instate
+            // TODO: Can we re-instate hourly by limiting dates to a single day?
 
             // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
 
