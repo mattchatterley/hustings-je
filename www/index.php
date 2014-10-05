@@ -3,8 +3,12 @@
 
     include_once('inc/database.php');
     include_once('inc/User.php');
+    include_once('inc/Stats.php');
 
     error_reporting(E_ALL);
+    ini_set('display_errors', '1');
+
+    date_default_timezone_set("GMT");
 
     $database = new Database();
 ?>
@@ -76,7 +80,10 @@
 
            <div class="row" style="background:#f8f5f8;">
                 <div class="col-sm-12" style="text-align:center;">
-                    <h3>Key stats here - # of tweets, etc</h3>
+                <?php
+                    $stats = new Stats();
+                ?>
+                    <h3>So far hustings.je has analysed <?php echo($stats->TotalTweets); ?> tweets by <?php echo($stats->TotalParticipants); ?> people.</h3>
                 </div>
             </div>
 

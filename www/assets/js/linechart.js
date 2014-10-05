@@ -92,7 +92,7 @@ function startLineChart(rawData, placeholderId)
     var chart = new Chart(ctx).Line(data, options);
 
     var legend = chart.generateLegend();
-    console.debug(legend);
-    $('#' + placeholderId + "-legend").append(legend);
+    //console.debug(legend);
+    $('#' + placeholderId + "-legend").html(legend);
         // TODO: Need to add a key identifying which user is which line - somehow (TBD in JS as we know colours)
 }
