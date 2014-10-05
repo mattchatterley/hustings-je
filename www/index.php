@@ -230,6 +230,7 @@
 
             // TODO: One for the list, but lower priority than mentions or selecting tweeters: can we make it so you can drill down to the tweets that make up a particular data point?
 
+            // TODO: aimee (with her stats hat on) recommends adding the y axis label and also highliting the baseline so it's easier to see
 
             // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
 
