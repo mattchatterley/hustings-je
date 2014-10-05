@@ -212,8 +212,7 @@
     </div>
         <?php
 
-            // TODO: Allow user to set number of most active tweeters
-            // TODO: Make most active tweeters obey date range
+            // TODO: Update mentions in real time (script from CR to go into crontab)
             // TODO: At the moment it's not using mentions, only the 'from' data and just shows the top 3, so I think first priority is to be able to use mentions (Or not) optionally - and also pick your users?
 
             // TODO: RENAME 'Overall sentiment by user' to 'Total positive/negative by user'
