@@ -57,3 +57,10 @@ h2
 	width: 30px;
 	height: 30px;
 	display:inline-block;
+}
+
+	
+input[type="radio"], input[type="checkbox"]
+{
+	margin: 4px 5px 0 0
+}
