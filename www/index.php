@@ -223,6 +223,16 @@
         <?php
 
             // TODO: Update mentions in real time (script from CR to go into crontab)
+        /*
+        hustings_je.Mentions holds the table of 'mention' values, i.e. hashtags and usernames. hustings_je.ScoredTweetMention is a mapping table between the two. Run this code every 30 seconds or minute to populate the mapping table:
+
+INSERT INTO hustings_je.ScoredTweetMentions (TweetId, MentionId)
+SELECT ST.TweetId, M.Id 
+FROM hustings_je.ScoredTweets AS ST
+INNER JOIN hustings_je.Mentions AS M
+    ON ST.TweetText LIKE CONCAT('%', M.Mention, '%')
+        AND TweetId NOT IN (SELECT DISTINCT TweetId FROM hustings_je.ScoredTweetMentions);
+    */
             // TODO: At the moment it's not using mentions, only the 'from' data and just shows the top 3, so I think first priority is to be able to use mentions (Or not) optionally - and also pick your users?
 
             // TODO: finish fixing 'week' and re-instate

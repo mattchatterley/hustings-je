@@ -59,7 +59,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 11166,
+				"buffer_size": 15190,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,7 +67,7 @@
 			"file": "faq.htm",
 			"settings":
 			{
-				"buffer_size": 4581,
+				"buffer_size": 6435,
 				"line_ending": "Windows",
 				"name": "faq.htm"
 			}
@@ -76,7 +76,7 @@
 			"file": "inc/Engine.php",
 			"settings":
 			{
-				"buffer_size": 11194,
+				"buffer_size": 11596,
 				"line_ending": "Windows"
 			}
 		},
@@ -84,7 +84,7 @@
 			"file": "handler.php",
 			"settings":
 			{
-				"buffer_size": 1163,
+				"buffer_size": 1492,
 				"line_ending": "Windows"
 			}
 		},
@@ -92,7 +92,7 @@
 			"file": "assets/js/hustings-main.js",
 			"settings":
 			{
-				"buffer_size": 2566,
+				"buffer_size": 3031,
 				"line_ending": "Windows"
 			}
 		},
@@ -100,7 +100,7 @@
 			"file": "assets/js/linechart.js",
 			"settings":
 			{
-				"buffer_size": 3653,
+				"buffer_size": 3783,
 				"line_ending": "Windows"
 			}
 		}
@@ -302,7 +302,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -311,15 +311,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11166,
+						"buffer_size": 15190,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8231,
-								8231
+								10610,
+								10610
 							]
 						],
 						"settings":
@@ -329,10 +329,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2076.0,
+						"translation.y": 2767.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -341,15 +341,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4581,
+						"buffer_size": 6435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2188,
-								3548
+								0,
+								0
 							]
 						],
 						"settings":
@@ -370,15 +370,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11194,
+						"buffer_size": 11596,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7701,
-								7711
+								0,
+								0
 							]
 						],
 						"settings":
@@ -391,7 +391,7 @@
 						"translation.y": 2402.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -400,15 +400,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1163,
+						"buffer_size": 1492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								398,
-								398
+								0,
+								0
 							]
 						],
 						"settings":
@@ -421,7 +421,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -430,15 +430,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2566,
+						"buffer_size": 3031,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2151,
-								2151
+								0,
+								0
 							]
 						],
 						"settings":
@@ -451,7 +451,7 @@
 						"translation.y": 481.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -460,15 +460,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3653,
+						"buffer_size": 3783,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3482,
-								3482
+								0,
+								0
 							]
 						],
 						"settings":
@@ -481,7 +481,7 @@
 						"translation.y": 888.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
