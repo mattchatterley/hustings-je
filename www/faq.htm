@@ -56,8 +56,18 @@
         <p>We have a Hadoop cluster in AWS that is collecting and analysing the tweets, then pushing them out to the website.<br/> All the source code is <a href="https://github.com/mattchatterley/hustings-je" target="_blank">here</a> if you want to see for yourself.</p>
         </div>
         <div class="col-xs-12">
-				<h4 style="font-weight:bold;">How do you analyse sentiment?</h4>
-        <p>There are two methods: simple (or “bag of words”) and NLP.<br/> The simple methods score individual words as either positive, neutral or negative, and the score for a tweet is simply added to give an overall score. NLP stands for Natural Language Processing. We use the Stanford University NLP Group’s CoreNLP suite of tools (http://nlp.stanford.edu/software/corenlp.shtml). This uses a neural network trained on movie reviews to generate the sentiment scores. This is currently the most accurate machine-learning algorithm for sentiment scoring.</p>
+                <h4 style="font-weight:bold;">How do you analyse sentiment?</h4>
+        <p>There are two methods: simple (or “bag of words”) and NLP.<br/> The simple methods score individual words as either positive, neutral or negative, and the score for a tweet is simply added to give an overall score. NLP stands for Natural Language Processing. We use the Stanford University NLP Group’s <a href="http://nlp.stanford.edu/software/corenlp.shtml" target="_blank">CoreNLP suite of tools</a>. This uses a neural network trained on movie reviews to generate the sentiment scores. This is currently the most accurate machine-learning algorithm for sentiment scoring.</p>
+        </div>
+        <div class="col-xs-12">
+                <h4 style="font-weight:bold;">Tell me more about how it works...?</h4>
+        <p>There are several components. We use:<br/>
+            <a href="http://flume.apache.org/" target="_blank">Flume</a>, and <a href="http://twitter4j.org/en/index.html" target="_blank">twitter4j</a> to collect the tweets and save them to HDFS.<br/>
+            <a href="http://oozie.apache.org/" target="_blank">Oozie</a> to schedule workflows which use...<br/>
+            ...<a href="https://www.python.org/" target="_blank">Python</a> scripts and streaming MapReduce to clean the data.<br/>
+            ...<a href="http://hive.apache.org/" target="_blank">Hive</a> (and <a href="http://nlp.stanford.edu/software/corenlp.shtml" target="_blank">Stanford CoreNLP</a>) to perform the analysis.<br/>
+            ...<a href="http://sqoop.apache.org/" target="_blank">Sqoop</a> to push the data from the backend to the frontend MySql database.
+        </p>
         </div>
         <div class="col-xs-12">
 				<h4 style="font-weight:bold;">I've found one you got wrong??!?!</h4>
